@@ -30,6 +30,8 @@ with DAG(
 
     dbt_tg = DbtTaskGroup(
         dbt_project_name="development",
+        dbt_root_path=DBT_ROOT_PATH,
+        dbt_models_dir="models",
         conn_id="snowflake_default",
         dbt_args={
             "dbt_executable_path": DBT_EXECUTABLE_PATH,
