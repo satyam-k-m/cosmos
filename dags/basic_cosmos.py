@@ -19,7 +19,7 @@ DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
 # PROFILES_FILE_PATH = Path(DBT_ROOT_PATH, "jaffle_shop", "profiles.yml")
 # DEFAULT_DBT_ROOT_PATH = Path("/opt/airflow/git/cosmos.git/dbt")
 PROFILES_FILE_PATH = Path(DBT_ROOT_PATH, "test-project", "profiles.yml")
-dbt_project_path = Path(DBT_ROOT_PATH, "test_project")
+dbt_project_path = Path(DBT_ROOT_PATH, "test-project")
 print(dbt_project_path)
 
 profile_config = ProfileConfig(
