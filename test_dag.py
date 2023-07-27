@@ -17,7 +17,7 @@ def check_env(ti=None):
 	home_dir = os.environ["HOME"]
 	print("home_dir :", home_dir)
 
-DEFAULT_DBT_ROOT_PATH = Path(__file__).parent
+DEFAULT_DBT_ROOT_PATH = Path(__file__).parent / "dbt"
 with DAG(dag_id="check_dbt", start_date=pendulum.now()) as dag:
       
         
