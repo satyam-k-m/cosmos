@@ -29,7 +29,6 @@ with DAG(
     e1 = EmptyOperator(task_id="pre_dbt")
 
     dbt_tg = DbtTaskGroup(
-        group_id = "dbt_project",
         dbt_project_name="development",
         dbt_root_path=DBT_ROOT_PATH,
         dbt_models_dir="models",
