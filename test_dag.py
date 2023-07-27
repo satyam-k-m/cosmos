@@ -18,7 +18,7 @@ def check_env(ti=None):
 	print("home_dir :", home_dir)
 
 DEFAULT_DBT_ROOT_PATH = Path(__file__).parent
-with DAG(dag_id="bash_dir", start_date=pendulum.now()) as dag:
+with DAG(dag_id="check_dbt", start_date=pendulum.now()) as dag:
       
         
 
