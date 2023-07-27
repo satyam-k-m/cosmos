@@ -8,7 +8,7 @@ from pathlib import Path
 from airflow.decorators import dag
 from airflow.operators.empty import EmptyOperator
 
-from cosmos import DbtTaskGroup, ProjectConfig, ProfileConfig
+from cosmos import DbtTaskGroup, ProjectConfig, ProfileConfig, RenderConfig,LoadMode
 # from cosmos.profiles import PostgresUserPasswordProfileMapping
 from cosmos.profiles import SnowflakeUserPasswordProfileMapping
 
@@ -47,10 +47,12 @@ def basic_cosmos_task_group() -> None:
     jaffle_shop = DbtTaskGroup(
         project_config=ProjectConfig(
             DBT_ROOT_PATH / "jaffle_shop",
-            manifest_path= DBT_ROOT_PATH / "jaffle_shop/target/manifest.json"
+            # manifest_path= DBT_ROOT_PATH / "jaffle_shop/target/manifest.json"
         ),
         profile_config=profile_config,
-        
+        render_config=RenderConfig(
+            load_mode=LoadMode.DBT_LS,
+        )
     )
 
     post_dbt = EmptyOperator(task_id="post_dbt")
