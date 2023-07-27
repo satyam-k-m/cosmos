@@ -51,7 +51,7 @@ def basic_cosmos_task_group() -> None:
         ),
         profile_config=profile_config,
         render_config=RenderConfig(
-            load_mode=LoadMode.DBT_LS,
+            load_method=LoadMode.DBT_LS,
         )
     )
 
