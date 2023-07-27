@@ -9,7 +9,9 @@ from airflow.decorators import dag
 from airflow.operators.empty import EmptyOperator
 
 from cosmos import DbtTaskGroup, ProjectConfig, ProfileConfig
-from cosmos.profiles import PostgresUserPasswordProfileMapping
+# from cosmos.profiles import PostgresUserPasswordProfileMapping
+from cosmos.profiles import SnowflakeUserPasswordProfileMapping
+
 
 DEFAULT_DBT_ROOT_PATH = Path(__file__).parent / "dbt"
 DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
@@ -17,9 +19,9 @@ DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
 profile_config = ProfileConfig(
     profile_name="default",
     target_name="dev",
-    profile_mapping=PostgresUserPasswordProfileMapping(
-        conn_id="airflow_db",
-        profile_args={"schema": "public"},
+    profile_mapping=SnowflakeUserPasswordProfileMapping(
+        conn_id="snowflake_default",
+        profile_args={"schema": "ins_bkp"},
     ),
 )
 
