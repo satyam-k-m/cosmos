@@ -17,6 +17,7 @@ def check_env(ti=None):
 	print("home_dir :", home_dir)
 
 with DAG(dag_id="bash_dir", start_date=pendulum.now()) as dag:
+      
         
 
       list_libs = BashOperator(
@@ -25,7 +26,16 @@ with DAG(dag_id="bash_dir", start_date=pendulum.now()) as dag:
 
       )
 
-      list_libs
+      list_dirs = BashOperator(
+           task_id = "list_folders",
+           bash_command= "ls /opt/airflow/git/cosmos.git/"
+      )
+
+
+
+   
+
+      list_libs >> list_dirs
 
     
      
