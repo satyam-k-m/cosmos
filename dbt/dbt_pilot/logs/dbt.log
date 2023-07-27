@@ -1,0 +1,1978 @@
+[0m21:18:32.458219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed69ee0220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed6880b670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed6880ba90>]}
+
+
+============================== 21:18:32.461252 | 23842413-387b-4307-9536-7542a8f8cd94 ==============================
+[0m21:18:32.461252 [info ] [MainThread]: Running with dbt=1.5.2
+[0m21:18:32.461949 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/satyam/DFS/dbt_project/dbt/dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/satyam/DFS/dbt_project/dbt/dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m21:18:32.742471 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63f35f10>]}
+[0m21:18:32.770914 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63ef1b80>]}
+[0m21:18:32.771913 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m21:18:32.801342 [debug] [MainThread]: checksum: 2435fa7be9fcfa6ffe15da8f202ddc09867bf7d6308330064299ccb85c8646b5, vars: {}, profile: , target: , version: 1.5.2
+[0m21:18:32.839054 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:18:32.839726 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:18:32.841307 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.development.staging
+[0m21:18:32.851187 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed62d1d310>]}
+[0m21:18:32.863096 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63e78f70>]}
+[0m21:18:32.863688 [info ] [MainThread]: Found 22 models, 0 tests, 0 snapshots, 0 analyses, 324 macros, 0 operations, 0 seed files, 26 sources, 0 exposures, 0 metrics, 0 groups
+[0m21:18:32.864177 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63ed8100>]}
+[0m21:18:32.866736 [info ] [MainThread]: 
+[0m21:18:32.867799 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m21:18:32.869622 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_insight_dev'
+[0m21:18:32.882851 [debug] [ThreadPool]: Using snowflake connection "list_insight_dev"
+[0m21:18:32.883268 [debug] [ThreadPool]: On list_insight_dev: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "connection_name": "list_insight_dev"} */
+show terse schemas in database insight_dev
+    limit 10000
+[0m21:18:32.883539 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:18:34.472534 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 2.0 seconds
+[0m21:18:34.476176 [debug] [ThreadPool]: On list_insight_dev: Close
+[0m21:18:34.903646 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_insight_dev, now list_insight_dev_INS_BKP)
+[0m21:18:34.918384 [debug] [ThreadPool]: Using snowflake connection "list_insight_dev_INS_BKP"
+[0m21:18:34.919083 [debug] [ThreadPool]: On list_insight_dev_INS_BKP: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "connection_name": "list_insight_dev_INS_BKP"} */
+show terse objects in insight_dev.INS_BKP
+[0m21:18:34.920054 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:18:36.076913 [debug] [ThreadPool]: SQL status: SUCCESS 716 in 1.0 seconds
+[0m21:18:36.097595 [debug] [ThreadPool]: On list_insight_dev_INS_BKP: Close
+[0m21:18:36.518000 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed62d06f70>]}
+[0m21:18:36.519008 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m21:18:36.519871 [info ] [MainThread]: 
+[0m21:18:36.596172 [debug] [Thread-1  ]: Began running node model.development.bronze_chrg_infrmtn
+[0m21:18:36.596802 [info ] [Thread-1  ]: 1 of 17 START sql table model INS_BKP.bronze_chrg_infrmtn ...................... [RUN]
+[0m21:18:36.597602 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_insight_dev_INS_BKP, now model.development.bronze_chrg_infrmtn)
+[0m21:18:36.597933 [debug] [Thread-1  ]: Began compiling node model.development.bronze_chrg_infrmtn
+[0m21:18:36.608135 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_chrg_infrmtn"
+[0m21:18:36.609629 [debug] [Thread-1  ]: On model.development.bronze_chrg_infrmtn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_chrg_infrmtn"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('CHRG_INFO')
+            order by column_index
+[0m21:18:36.610468 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:37.789145 [debug] [Thread-1  ]: SQL status: SUCCESS 11 in 1.0 seconds
+[0m21:18:37.791372 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_chrg_infrmtn"
+[0m21:18:37.792667 [debug] [Thread-1  ]: Timing info for model.development.bronze_chrg_infrmtn (compile): 21:18:36.598339 => 21:18:37.792199
+[0m21:18:37.793089 [debug] [Thread-1  ]: Began executing node model.development.bronze_chrg_infrmtn
+[0m21:18:37.809361 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_chrg_infrmtn"
+[0m21:18:37.809946 [debug] [Thread-1  ]: On model.development.bronze_chrg_infrmtn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_chrg_infrmtn"} */
+show parameters like 'query_tag' in session
+[0m21:18:37.986190 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:37.987709 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:37.988544 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_chrg_infrmtn"
+[0m21:18:37.989003 [debug] [Thread-1  ]: On model.development.bronze_chrg_infrmtn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_chrg_infrmtn"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:38.188092 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:38.219469 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_chrg_infrmtn"
+[0m21:18:38.222267 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_chrg_infrmtn"
+[0m21:18:38.222924 [debug] [Thread-1  ]: On model.development.bronze_chrg_infrmtn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_chrg_infrmtn"} */
+create or replace transient table insight_dev.INS_BKP.bronze_chrg_infrmtn
+         as
+        (
+
+with CHRG_INFRMTN as (
+    select * exclude rn from (
+     select
+        
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS PAY_LINE_NBR,
+        
+            value:c2:: NUMBER(38,4) AS TX_NBR,
+        
+            value:c3:: NUMBER(38,4) AS TERM_NBR,
+        
+            value:c4:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c5:: NUMBER(38,4) AS POS_LOC_ID,
+        
+            value:c6:: NUMBER(38,4) AS BIZ_DT,
+        
+            value:c7:: TEXT AS ADJ_FLG,
+        
+            value:c8:: NUMBER(38,4) AS ACC_NBR,
+        
+            value:c9:: NUMBER(38,4) AS ACC_TYPE,
+        
+            value:c10:: NUMBER(38,4) AS EXP_DT,
+        
+            value:c11:: NUMBER(38,4) AS APP_CD,
+            
+    
+        HASH(concat_ws('~',pay_line_nbr,tx_nbr,term_nbr,div_nbr,pos_loc_id)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by pay_line_nbr,tx_nbr,term_nbr,div_nbr,pos_loc_id order by 1) as rn
+        from insight_dev.ins_bkp.ext_chrg_info
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn = 1
+)
+
+select * from CHRG_INFRMTN
+        );
+[0m21:18:39.140800 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:39.168385 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:39.169141 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_chrg_infrmtn"
+[0m21:18:39.169445 [debug] [Thread-1  ]: On model.development.bronze_chrg_infrmtn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_chrg_infrmtn"} */
+alter session unset query_tag
+[0m21:18:39.355029 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:39.357788 [debug] [Thread-1  ]: Timing info for model.development.bronze_chrg_infrmtn (execute): 21:18:37.793293 => 21:18:39.357384
+[0m21:18:39.358326 [debug] [Thread-1  ]: On model.development.bronze_chrg_infrmtn: Close
+[0m21:18:39.732374 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620f0f40>]}
+[0m21:18:39.733350 [info ] [Thread-1  ]: 1 of 17 OK created sql table model INS_BKP.bronze_chrg_infrmtn ................. [[32mSUCCESS 1[0m in 3.13s]
+[0m21:18:39.734283 [debug] [Thread-1  ]: Finished running node model.development.bronze_chrg_infrmtn
+[0m21:18:39.734894 [debug] [Thread-1  ]: Began running node model.development.bronze_division
+[0m21:18:39.735882 [info ] [Thread-1  ]: 2 of 17 START sql table model INS_BKP.bronze_division .......................... [RUN]
+[0m21:18:39.737088 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_chrg_infrmtn, now model.development.bronze_division)
+[0m21:18:39.737976 [debug] [Thread-1  ]: Began compiling node model.development.bronze_division
+[0m21:18:39.746365 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_division"
+[0m21:18:39.747164 [debug] [Thread-1  ]: On model.development.bronze_division: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_division"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('DVSN')
+            order by column_index
+[0m21:18:39.747879 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:40.659257 [debug] [Thread-1  ]: SQL status: SUCCESS 38 in 1.0 seconds
+[0m21:18:40.661584 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_division"
+[0m21:18:40.662765 [debug] [Thread-1  ]: Timing info for model.development.bronze_division (compile): 21:18:39.738292 => 21:18:40.662316
+[0m21:18:40.663250 [debug] [Thread-1  ]: Began executing node model.development.bronze_division
+[0m21:18:40.666289 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_division"
+[0m21:18:40.666693 [debug] [Thread-1  ]: On model.development.bronze_division: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_division"} */
+show parameters like 'query_tag' in session
+[0m21:18:40.886743 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:40.888572 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:40.889592 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_division"
+[0m21:18:40.890079 [debug] [Thread-1  ]: On model.development.bronze_division: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_division"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:41.061984 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:41.072019 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_division"
+[0m21:18:41.077529 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_division"
+[0m21:18:41.078737 [debug] [Thread-1  ]: On model.development.bronze_division: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_division"} */
+create or replace transient table insight_dev.INS_BKP.bronze_division
+         as
+        (
+
+
+with division as (
+    select * exclude rn from (
+     select
+        
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c2:: TEXT AS DIV_NAME,
+        
+            value:c3:: TEXT AS ADDR_LINE_1,
+        
+            value:c4:: TEXT AS ADDR_LINE_2,
+        
+            value:c5:: TEXT AS ADDR_LINE_3,
+        
+            value:c6:: TEXT AS CITY,
+        
+            value:c7:: NUMBER(38,4) AS STATE,
+        
+            value:c8:: NUMBER(38,4) AS ZIP_CD,
+        
+            value:c9:: TEXT AS DVSN_RPT_HDNG,
+        
+            value:c10:: TEXT AS WRITE_OFF_DESC_1,
+        
+            value:c11:: TEXT AS WRIRE_OFF_DESC_2,
+        
+            value:c12:: TEXT AS DT_FORMAT_CD,
+        
+            value:c13:: NUMBER(38,4) AS SALES_CTL_NBR,
+        
+            value:c14:: NUMBER(38,4) AS CNCL_PO_DAYS,
+        
+            value:c15:: NUMBER(38,4) AS CNCL_PO_DAYS_PCT,
+        
+            value:c16:: TEXT AS CURR_CD,
+        
+            value:c17:: BOOLEAN AS MULT_OTB_PRES,
+        
+            value:c18:: BOOLEAN AS MULT_UNIT_RTL,
+        
+            value:c19:: BOOLEAN AS MULT_DEPT_IN_PO,
+        
+            value:c20:: NUMBER(38,4) AS MOD_CHK_ROUTINE,
+        
+            value:c21:: NUMBER(38,4) AS INV_VAR_PCT,
+        
+            value:c22:: NUMBER(38,4) AS INV_VAR_AMT,
+        
+            value:c23:: BOOLEAN AS COST_REAVG,
+        
+            value:c24:: BOOLEAN AS SALES_PROCESS_FLG,
+        
+            value:c25:: NUMBER(38,4) AS INV_MIN_CHGBCK_AMT,
+        
+            value:c26:: NUMBER(38,4) AS CUSTOMS_FLG,
+        
+            value:c27:: NUMBER(38,4) AS EXCH_RATE_VAR,
+        
+            value:c28:: NUMBER(38,4) AS INV_CUTOFF_DAY,
+        
+            value:c29:: NUMBER(38,4) AS PLAN_LVL,
+        
+            value:c30:: BOOLEAN AS PRICE_LKUP_FLG,
+        
+            value:c31:: NUMBER(38,4) AS TRAD_COMP_CD,
+        
+            value:c32:: TEXT AS DB_COST_FLG,
+        
+            value:c33:: BOOLEAN AS CREATE_PREORD_TRANS_AUD_REC,
+        
+            value:c34:: BOOLEAN AS POPI_CNT_FLG,
+        
+            value:c35:: NUMBER(38,4) AS RCENT_CD,
+        
+            value:c36:: NUMBER(38,4) AS AUTO_WRITE_OFF_LIMIT,
+        
+            value:c37:: BOOLEAN AS MRPU_ENTRY,
+        
+            value:c38:: BOOLEAN AS SCLS_REALIGN_DUR_PI,
+            
+    
+        20230706110040 as run_id,
+        HASH(DIV_NBR) as bsns_key,
+        row_number() over(partition by DIV_NBR order by 1) as rn
+    from insight_dev.ins_bkp.ext_dvsn
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+
+)
+select * from division
+        );
+[0m21:18:41.955135 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:41.957747 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:41.958552 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_division"
+[0m21:18:41.958841 [debug] [Thread-1  ]: On model.development.bronze_division: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_division"} */
+alter session unset query_tag
+[0m21:18:42.157525 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:42.159287 [debug] [Thread-1  ]: Timing info for model.development.bronze_division (execute): 21:18:40.663529 => 21:18:42.159136
+[0m21:18:42.159585 [debug] [Thread-1  ]: On model.development.bronze_division: Close
+[0m21:18:42.513379 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed61e93fd0>]}
+[0m21:18:42.514588 [info ] [Thread-1  ]: 2 of 17 OK created sql table model INS_BKP.bronze_division ..................... [[32mSUCCESS 1[0m in 2.78s]
+[0m21:18:42.515552 [debug] [Thread-1  ]: Finished running node model.development.bronze_division
+[0m21:18:42.516080 [debug] [Thread-1  ]: Began running node model.development.bronze_local_currency
+[0m21:18:42.516634 [info ] [Thread-1  ]: 3 of 17 START sql table model INS_BKP.bronze_local_currency .................... [RUN]
+[0m21:18:42.518100 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_division, now model.development.bronze_local_currency)
+[0m21:18:42.518839 [debug] [Thread-1  ]: Began compiling node model.development.bronze_local_currency
+[0m21:18:42.528884 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_local_currency"
+[0m21:18:42.529412 [debug] [Thread-1  ]: On model.development.bronze_local_currency: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_local_currency"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('LCL_CRRNCY')
+            order by column_index
+[0m21:18:42.529898 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:43.411296 [debug] [Thread-1  ]: SQL status: SUCCESS 6 in 1.0 seconds
+[0m21:18:43.413384 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_local_currency"
+[0m21:18:43.414343 [debug] [Thread-1  ]: Timing info for model.development.bronze_local_currency (compile): 21:18:42.519283 => 21:18:43.414121
+[0m21:18:43.414734 [debug] [Thread-1  ]: Began executing node model.development.bronze_local_currency
+[0m21:18:43.417005 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_local_currency"
+[0m21:18:43.417455 [debug] [Thread-1  ]: On model.development.bronze_local_currency: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_local_currency"} */
+show parameters like 'query_tag' in session
+[0m21:18:43.628189 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:43.629890 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:43.630822 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_local_currency"
+[0m21:18:43.631351 [debug] [Thread-1  ]: On model.development.bronze_local_currency: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_local_currency"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:43.854831 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:43.862828 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_local_currency"
+[0m21:18:43.864403 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_local_currency"
+[0m21:18:43.864905 [debug] [Thread-1  ]: On model.development.bronze_local_currency: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_local_currency"} */
+create or replace transient table insight_dev.INS_BKP.bronze_local_currency
+         as
+        (
+
+WITH LOCAL_CURRENCY AS (
+        select * exclude rn from (
+
+    SELECT 
+        
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS CURR_CD,
+        
+            value:c2:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c3:: TEXT AS CURR_DESC,
+        
+            value:c4:: TEXT AS CURR_SHORT_DESC,
+        
+            value:c5:: BOOLEAN AS LOCAL_CURR_IND,
+        
+            value:c6:: NUMBER(38,4) AS CURR_UNIT,
+            
+    
+        HASH(CONCAT_WS('~',CURR_CD,DIV_NBR)) AS bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by CURR_CD,DIV_NBR order by 1) as rn
+    FROM insight_dev.ins_bkp.ext_lcl_crrncy
+    where
+    division =  'SG'
+    and run_dt = substr('20230706110040',0,8)
+
+        )
+        where rn  = 1
+)
+SELECT *
+FROM LOCAL_CURRENCY
+        );
+[0m21:18:44.521621 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:44.526443 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:44.528073 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_local_currency"
+[0m21:18:44.528672 [debug] [Thread-1  ]: On model.development.bronze_local_currency: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_local_currency"} */
+alter session unset query_tag
+[0m21:18:44.751479 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:44.755601 [debug] [Thread-1  ]: Timing info for model.development.bronze_local_currency (execute): 21:18:43.415015 => 21:18:44.755203
+[0m21:18:44.756810 [debug] [Thread-1  ]: On model.development.bronze_local_currency: Close
+[0m21:18:45.116442 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed61e93fa0>]}
+[0m21:18:45.117132 [info ] [Thread-1  ]: 3 of 17 OK created sql table model INS_BKP.bronze_local_currency ............... [[32mSUCCESS 1[0m in 2.60s]
+[0m21:18:45.118161 [debug] [Thread-1  ]: Finished running node model.development.bronze_local_currency
+[0m21:18:45.118709 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_dscnt
+[0m21:18:45.119263 [info ] [Thread-1  ]: 4 of 17 START sql table model INS_BKP.bronze_pos_dscnt ......................... [RUN]
+[0m21:18:45.120572 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_local_currency, now model.development.bronze_pos_dscnt)
+[0m21:18:45.121697 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_dscnt
+[0m21:18:45.128689 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_dscnt"
+[0m21:18:45.129313 [debug] [Thread-1  ]: On model.development.bronze_pos_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_dscnt"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_DSCNT')
+            order by column_index
+[0m21:18:45.129713 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:46.385571 [debug] [Thread-1  ]: SQL status: SUCCESS 5 in 1.0 seconds
+[0m21:18:46.397327 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_dscnt"
+[0m21:18:46.398974 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_dscnt (compile): 21:18:45.121985 => 21:18:46.398541
+[0m21:18:46.399540 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_dscnt
+[0m21:18:46.404639 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_dscnt"
+[0m21:18:46.405264 [debug] [Thread-1  ]: On model.development.bronze_pos_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_dscnt"} */
+show parameters like 'query_tag' in session
+[0m21:18:46.647706 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:46.649175 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:46.650481 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_dscnt"
+[0m21:18:46.651099 [debug] [Thread-1  ]: On model.development.bronze_pos_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_dscnt"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:46.929170 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:46.943121 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_dscnt"
+[0m21:18:46.946859 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_dscnt"
+[0m21:18:46.947695 [debug] [Thread-1  ]: On model.development.bronze_pos_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_dscnt"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_dscnt
+         as
+        (
+
+with POS_DSCNT as (
+        select * exclude rn from (
+
+     select
+        
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS DIV_DSCNT_CD,
+        
+            value:c2:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c3:: TEXT AS DIV_DSCNT_DESC,
+        
+            value:c4:: NUMBER(38,4) AS MERCH_DSCNT_CD,
+        
+            value:c5:: BOOLEAN AS MD_DSCNT_CD,
+            
+    
+        HASH(concat_ws('~',div_nbr,div_dscnt_cd)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by div_nbr,div_dscnt_cd order by 1) as rn
+
+        from insight_dev.ins_bkp.ext_pos_dscnt
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+)
+where rn=1
+)
+select * from POS_DSCNT
+        );
+[0m21:18:47.595699 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:47.598078 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:47.599283 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_dscnt"
+[0m21:18:47.599850 [debug] [Thread-1  ]: On model.development.bronze_pos_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_dscnt"} */
+alter session unset query_tag
+[0m21:18:47.788969 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:47.790675 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_dscnt (execute): 21:18:46.399765 => 21:18:47.790508
+[0m21:18:47.791105 [debug] [Thread-1  ]: On model.development.bronze_pos_dscnt: Close
+[0m21:18:48.196993 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620fdd30>]}
+[0m21:18:48.198204 [info ] [Thread-1  ]: 4 of 17 OK created sql table model INS_BKP.bronze_pos_dscnt .................... [[32mSUCCESS 1[0m in 3.08s]
+[0m21:18:48.199100 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_dscnt
+[0m21:18:48.199651 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_shop
+[0m21:18:48.200180 [info ] [Thread-1  ]: 5 of 17 START sql table model INS_BKP.bronze_pos_shop .......................... [RUN]
+[0m21:18:48.201224 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_dscnt, now model.development.bronze_pos_shop)
+[0m21:18:48.201706 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_shop
+[0m21:18:48.210225 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_shop"
+[0m21:18:48.210683 [debug] [Thread-1  ]: On model.development.bronze_pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_shop"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_SHOP')
+            order by column_index
+[0m21:18:48.211100 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:49.209795 [debug] [Thread-1  ]: SQL status: SUCCESS 2 in 1.0 seconds
+[0m21:18:49.215218 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_shop"
+[0m21:18:49.216520 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_shop (compile): 21:18:48.202339 => 21:18:49.216107
+[0m21:18:49.217053 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_shop
+[0m21:18:49.220710 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_shop"
+[0m21:18:49.221277 [debug] [Thread-1  ]: On model.development.bronze_pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_shop"} */
+show parameters like 'query_tag' in session
+[0m21:18:49.408409 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:49.413550 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:49.415532 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_shop"
+[0m21:18:49.416370 [debug] [Thread-1  ]: On model.development.bronze_pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_shop"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:49.602136 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:49.620493 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_shop"
+[0m21:18:49.622955 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_shop"
+[0m21:18:49.623709 [debug] [Thread-1  ]: On model.development.bronze_pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_shop"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_shop
+         as
+        (
+
+---updated bronze table
+with POS_SHOP as (
+    select * exclude rn from (
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS POS_LOCATION_ID,
+        
+            value:c2:: NUMBER(38,4) AS DIVISON_NUMBER,
+            
+    
+        HASH(concat_ws('~',pos_location_id,divison_number)) as bsns_key, 
+        20230706110040 as run_id,
+        row_number() over(partition by pos_location_id,divison_number order by 1) as rn
+
+        from insight_dev.ins_bkp.ext_pos_shop
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+
+select * from POS_SHOP
+        );
+[0m21:18:50.202959 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:50.207345 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:50.209306 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_shop"
+[0m21:18:50.210890 [debug] [Thread-1  ]: On model.development.bronze_pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_shop"} */
+alter session unset query_tag
+[0m21:18:50.419484 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:50.426108 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_shop (execute): 21:18:49.217441 => 21:18:50.425364
+[0m21:18:50.428441 [debug] [Thread-1  ]: On model.development.bronze_pos_shop: Close
+[0m21:18:50.777977 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed61ea9730>]}
+[0m21:18:50.779945 [info ] [Thread-1  ]: 5 of 17 OK created sql table model INS_BKP.bronze_pos_shop ..................... [[32mSUCCESS 1[0m in 2.58s]
+[0m21:18:50.782016 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_shop
+[0m21:18:50.783139 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_tndr
+[0m21:18:50.784354 [info ] [Thread-1  ]: 6 of 17 START sql table model INS_BKP.bronze_pos_tndr .......................... [RUN]
+[0m21:18:50.785720 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_shop, now model.development.bronze_pos_tndr)
+[0m21:18:50.786160 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_tndr
+[0m21:18:50.795531 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tndr"
+[0m21:18:50.796279 [debug] [Thread-1  ]: On model.development.bronze_pos_tndr: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tndr"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_TNDR')
+            order by column_index
+[0m21:18:50.796693 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:51.752019 [debug] [Thread-1  ]: SQL status: SUCCESS 15 in 1.0 seconds
+[0m21:18:51.754038 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_tndr"
+[0m21:18:51.754798 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tndr (compile): 21:18:50.786471 => 21:18:51.754523
+[0m21:18:51.755491 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_tndr
+[0m21:18:51.759427 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tndr"
+[0m21:18:51.759844 [debug] [Thread-1  ]: On model.development.bronze_pos_tndr: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tndr"} */
+show parameters like 'query_tag' in session
+[0m21:18:52.008866 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:52.011885 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:52.013066 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tndr"
+[0m21:18:52.013478 [debug] [Thread-1  ]: On model.development.bronze_pos_tndr: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tndr"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:52.241992 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:52.250898 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_tndr"
+[0m21:18:52.253265 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tndr"
+[0m21:18:52.253976 [debug] [Thread-1  ]: On model.development.bronze_pos_tndr: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tndr"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_tndr
+         as
+        (
+
+with POS_TNDR as (
+	    select * exclude rn from (
+
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS PAY_LINE_NBR,
+        
+            value:c2:: NUMBER(38,4) AS TX_NBR,
+        
+            value:c3:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c4:: NUMBER(38,4) AS TERM_NBR,
+        
+            value:c5:: NUMBER(38,4) AS POS_LOC_ID,
+        
+            value:c6:: NUMBER(38,4) AS BIZ_DT,
+        
+            value:c7:: TEXT AS ADJ_FLG,
+        
+            value:c8:: NUMBER(38,4) AS CURR_CD,
+        
+            value:c9:: NUMBER(38,4) AS PAY_MTHD,
+        
+            value:c10:: NUMBER(38,4) AS FOR_CURR,
+        
+            value:c11:: NUMBER(38,4) AS TEN_AMT,
+        
+            value:c12:: NUMBER(38,4) AS EXCH_RATE,
+        
+            value:c13:: NUMBER(38,4) AS RCPT_SEQ_NBR,
+        
+            value:c14:: NUMBER(38,4) AS ADDITION_DATA,
+        
+            value:c15:: NUMBER(38,4) AS CHNG_RND,
+            
+    
+        HASH(concat_ws('~',pay_line_nbr,tx_nbr,term_nbr,div_nbr,pos_loc_id)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by pay_line_nbr,tx_nbr,term_nbr,div_nbr,pos_loc_id order by 1) as rn
+		from insight_dev.ins_bkp.ext_pos_tndr
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+where rn=1
+)
+
+select * from POS_TNDR
+        );
+[0m21:18:52.831124 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:52.834230 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:52.835320 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tndr"
+[0m21:18:52.835796 [debug] [Thread-1  ]: On model.development.bronze_pos_tndr: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tndr"} */
+alter session unset query_tag
+[0m21:18:53.068069 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:53.071040 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tndr (execute): 21:18:51.755890 => 21:18:53.070579
+[0m21:18:53.072058 [debug] [Thread-1  ]: On model.development.bronze_pos_tndr: Close
+[0m21:18:53.785849 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620fdd90>]}
+[0m21:18:53.786637 [info ] [Thread-1  ]: 6 of 17 OK created sql table model INS_BKP.bronze_pos_tndr ..................... [[32mSUCCESS 1[0m in 3.00s]
+[0m21:18:53.787332 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_tndr
+[0m21:18:53.787854 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_trmnl
+[0m21:18:53.788855 [info ] [Thread-1  ]: 7 of 17 START sql table model INS_BKP.bronze_pos_trmnl ......................... [RUN]
+[0m21:18:53.793064 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_tndr, now model.development.bronze_pos_trmnl)
+[0m21:18:53.795471 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_trmnl
+[0m21:18:53.805926 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_trmnl"
+[0m21:18:53.808124 [debug] [Thread-1  ]: On model.development.bronze_pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_trmnl"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_TRMNL')
+            order by column_index
+[0m21:18:53.809971 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:54.710056 [debug] [Thread-1  ]: SQL status: SUCCESS 3 in 1.0 seconds
+[0m21:18:54.715067 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_trmnl"
+[0m21:18:54.717054 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_trmnl (compile): 21:18:53.796143 => 21:18:54.716274
+[0m21:18:54.718304 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_trmnl
+[0m21:18:54.726297 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_trmnl"
+[0m21:18:54.727437 [debug] [Thread-1  ]: On model.development.bronze_pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_trmnl"} */
+show parameters like 'query_tag' in session
+[0m21:18:54.912458 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:54.914988 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:54.916092 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_trmnl"
+[0m21:18:54.916576 [debug] [Thread-1  ]: On model.development.bronze_pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_trmnl"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:55.104478 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:55.119165 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_trmnl"
+[0m21:18:55.120946 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_trmnl"
+[0m21:18:55.121764 [debug] [Thread-1  ]: On model.development.bronze_pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_trmnl"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_trmnl
+         as
+        (
+
+with POS_TRMNL as (
+        select * exclude rn from (
+
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS POS_LOCATION_ID,
+        
+            value:c2:: NUMBER(38,4) AS DIVISON_NUMBER,
+        
+            value:c3:: NUMBER(38,4) AS TERMINAL_NUMBER,
+            
+    
+        HASH(concat_ws('~',pos_location_id,divison_number,terminal_number)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by pos_location_id,divison_number,terminal_number order by 1) as rn        
+        from insight_dev.ins_bkp.ext_pos_trmnl
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+select * from POS_TRMNL
+        );
+[0m21:18:55.768403 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:55.771198 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:55.772697 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_trmnl"
+[0m21:18:55.773587 [debug] [Thread-1  ]: On model.development.bronze_pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_trmnl"} */
+alter session unset query_tag
+[0m21:18:55.984470 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:55.988501 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_trmnl (execute): 21:18:54.719102 => 21:18:55.986668
+[0m21:18:55.989550 [debug] [Thread-1  ]: On model.development.bronze_pos_trmnl: Close
+[0m21:18:56.318021 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620fd370>]}
+[0m21:18:56.320329 [info ] [Thread-1  ]: 7 of 17 OK created sql table model INS_BKP.bronze_pos_trmnl .................... [[32mSUCCESS 1[0m in 2.53s]
+[0m21:18:56.322925 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_trmnl
+[0m21:18:56.323981 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_tx
+[0m21:18:56.325278 [info ] [Thread-1  ]: 8 of 17 START sql table model INS_BKP.bronze_pos_tx ............................ [RUN]
+[0m21:18:56.326773 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_trmnl, now model.development.bronze_pos_tx)
+[0m21:18:56.327379 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_tx
+[0m21:18:56.335450 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx"
+[0m21:18:56.336187 [debug] [Thread-1  ]: On model.development.bronze_pos_tx: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_TX')
+            order by column_index
+[0m21:18:56.336689 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:18:57.581534 [debug] [Thread-1  ]: SQL status: SUCCESS 42 in 1.0 seconds
+[0m21:18:57.584369 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_tx"
+[0m21:18:57.585393 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tx (compile): 21:18:56.327799 => 21:18:57.585141
+[0m21:18:57.586634 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_tx
+[0m21:18:57.595309 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx"
+[0m21:18:57.595974 [debug] [Thread-1  ]: On model.development.bronze_pos_tx: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx"} */
+show parameters like 'query_tag' in session
+[0m21:18:57.822517 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:57.824953 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:18:57.826393 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx"
+[0m21:18:57.826850 [debug] [Thread-1  ]: On model.development.bronze_pos_tx: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:18:58.058891 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:58.072424 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_tx"
+[0m21:18:58.081500 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx"
+[0m21:18:58.082682 [debug] [Thread-1  ]: On model.development.bronze_pos_tx: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_tx
+         as
+        (
+
+with pos_tx as (
+        select * exclude rn from (
+    select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS TX_NBR,
+        
+            value:c2:: NUMBER(38,4) AS POS_LOC_ID,
+        
+            value:c3:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c4:: NUMBER(38,4) AS TERM_NBR,
+        
+            value:c5:: NUMBER(38,4) AS BIZ_DT,
+        
+            value:c6:: TEXT AS ADJ_FLG,
+        
+            value:c7:: NUMBER(38,4) AS TX_DT,
+        
+            value:c8:: NUMBER(38,4) AS TX_TIME,
+        
+            value:c9:: TEXT AS CURR_CD,
+        
+            value:c10:: NUMBER(38,4) AS POS_TX_TYPE,
+        
+            value:c11:: NUMBER(38,4) AS MERCH_TX_TYPE,
+        
+            value:c12:: NUMBER(38,4) AS CUST_ID,
+        
+            value:c13:: NUMBER(38,4) AS LOCAL_NAT_CD,
+        
+            value:c14:: TEXT AS REKEY_IND,
+        
+            value:c15:: NUMBER(38,4) AS ITEM_CNT,
+        
+            value:c16:: NUMBER(38,4) AS CASHIER_NBR,
+        
+            value:c17:: NUMBER(38,4) AS LOCAL_NET_AMT,
+        
+            value:c18:: NUMBER(38,4) AS LOCAL_SUBTOT,
+        
+            value:c19:: NUMBER(38,4) AS LOCAL_TOT_TAX,
+        
+            value:c20:: NUMBER(38,4) AS TOT_PAY_AMT,
+        
+            value:c21:: TEXT AS HOST_CUR_CD,
+        
+            value:c22:: NUMBER(38,4) AS HOST_NET_AMT,
+        
+            value:c23:: NUMBER(38,4) AS HOST_SUBTOT,
+        
+            value:c24:: NUMBER(38,4) AS HOST_TOT_TAX,
+        
+            value:c25:: NUMBER(38,4) AS RFND_REAS,
+        
+            value:c26:: TEXT AS DUTY_PAY_FLAG,
+        
+            value:c27:: NUMBER(38,4) AS MEMBERSHIP_CARD_NUMBER,
+        
+            value:c28:: TEXT AS CUST_FNAME,
+        
+            value:c29:: TEXT AS CUST_LNAME,
+        
+            value:c30:: TEXT AS CUST_GNDR,
+        
+            value:c31:: TEXT AS CUST_PSPRT,
+        
+            value:c32:: TEXT AS CUST_FLT,
+        
+            value:c33:: NUMBER(38,4) AS CUST_DEPDATE,
+        
+            value:c34:: TEXT AS FLT_DST,
+        
+            value:c35:: TEXT AS FLT_CLSS,
+        
+            value:c36:: TEXT AS FLT_DPNT,
+        
+            value:c37:: TEXT AS FLT_SEAT,
+        
+            value:c38:: TEXT AS FLT_CFLT,
+        
+            value:c39:: NUMBER(38,4) AS FLT_CDEPDATE,
+        
+            value:c40:: TEXT AS FLT_CDST,
+        
+            value:c41:: NUMBER(38,4) AS ID_TYPE,
+        
+            value:c42:: NUMBER(38,4) AS ID_NO,
+            
+    
+		HASH(concat_ws('~',TX_NBR,POS_LOC_ID,DIV_NBR,TERM_NBR)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by TX_NBR,POS_LOC_ID,DIV_NBR,TERM_NBR order by 1) as rn
+        from insight_dev.ins_bkp.ext_pos_tx
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+		
+select * from pos_tx
+        );
+[0m21:18:58.732008 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:18:58.734232 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:18:58.735096 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx"
+[0m21:18:58.735583 [debug] [Thread-1  ]: On model.development.bronze_pos_tx: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx"} */
+alter session unset query_tag
+[0m21:18:58.922960 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:18:58.925535 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tx (execute): 21:18:57.587404 => 21:18:58.925296
+[0m21:18:58.926004 [debug] [Thread-1  ]: On model.development.bronze_pos_tx: Close
+[0m21:18:59.288389 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620fd370>]}
+[0m21:18:59.289262 [info ] [Thread-1  ]: 8 of 17 OK created sql table model INS_BKP.bronze_pos_tx ....................... [[32mSUCCESS 1[0m in 2.96s]
+[0m21:18:59.290169 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_tx
+[0m21:18:59.290789 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_tx_dscnt
+[0m21:18:59.291477 [info ] [Thread-1  ]: 9 of 17 START sql table model INS_BKP.bronze_pos_tx_dscnt ...................... [RUN]
+[0m21:18:59.293339 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_tx, now model.development.bronze_pos_tx_dscnt)
+[0m21:18:59.295557 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_tx_dscnt
+[0m21:18:59.308840 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_dscnt"
+[0m21:18:59.310500 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_dscnt"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_TX_DCT')
+            order by column_index
+[0m21:18:59.311701 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:00.230360 [debug] [Thread-1  ]: SQL status: SUCCESS 21 in 1.0 seconds
+[0m21:19:00.233428 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_tx_dscnt"
+[0m21:19:00.234992 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tx_dscnt (compile): 21:18:59.296770 => 21:19:00.234517
+[0m21:19:00.235637 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_tx_dscnt
+[0m21:19:00.238918 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_dscnt"
+[0m21:19:00.240501 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_dscnt"} */
+show parameters like 'query_tag' in session
+[0m21:19:00.442044 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:00.444751 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:19:00.446240 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_dscnt"
+[0m21:19:00.446987 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_dscnt"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:19:00.643423 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:00.652653 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_tx_dscnt"
+[0m21:19:00.656434 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_dscnt"
+[0m21:19:00.657157 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_dscnt"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_tx_dscnt
+         as
+        (
+
+with POS_TX_DSCNT as (
+	    select * exclude rn from (
+
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS DSCNT_LINE_NBR,
+        
+            value:c2:: NUMBER(38,4) AS SALE_LINE_NBR,
+        
+            value:c3:: NUMBER(38,4) AS TX_NBR,
+        
+            value:c4:: NUMBER(38,4) AS POS_LOC_ID,
+        
+            value:c5:: NUMBER(38,4) AS TERM_NBR,
+        
+            value:c6:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c7:: NUMBER(38,4) AS BIZ_DT,
+        
+            value:c8:: TEXT AS ADJ_FLG,
+        
+            value:c9:: NUMBER(38,4) AS STORE_ID,
+        
+            value:c10:: TEXT AS DSCNT_ID_NBR,
+        
+            value:c11:: NUMBER(38,4) AS DIV_DSCNT_CD,
+        
+            value:c12:: TEXT AS DIV_DSCNT_TYPE,
+        
+            value:c13:: NUMBER(38,4) AS MERCH_DSCNT_CD,
+        
+            value:c14:: NUMBER(38,4) AS LOCAL_DSCNT_AMT,
+        
+            value:c15:: NUMBER(38,4) AS HOST_DSCNT_AMT,
+        
+            value:c16:: NUMBER(38,4) AS DSCNT_PERCENT,
+        
+            value:c17:: NUMBER(38,4) AS RTL_DSCNT_EMBED_TAX,
+        
+            value:c18:: NUMBER(38,4) AS COUP_CD,
+        
+            value:c19:: TEXT AS COUP_NBR,
+        
+            value:c20:: NUMBER(38,4) AS DSCNT_REAS_CD,
+        
+            value:c21:: NUMBER(38,4) AS RCPT_SEQ_NBR,
+            
+    
+        HASH(concat_ws('~',dscnt_line_nbr,sale_line_nbr,tx_nbr,term_nbr,div_nbr,pos_loc_id)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by dscnt_line_nbr,sale_line_nbr,tx_nbr,term_nbr,div_nbr,pos_loc_id order by 1) as rn		
+		from insight_dev.ins_bkp.ext_pos_tx_dct
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+
+select * from POS_TX_DSCNT
+        );
+[0m21:19:01.345898 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:01.349083 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:19:01.350107 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_dscnt"
+[0m21:19:01.350503 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_dscnt: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_dscnt"} */
+alter session unset query_tag
+[0m21:19:01.587879 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:01.589679 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tx_dscnt (execute): 21:19:00.235909 => 21:19:01.589511
+[0m21:19:01.590014 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_dscnt: Close
+[0m21:19:01.899561 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed61ea9f10>]}
+[0m21:19:01.902586 [info ] [Thread-1  ]: 9 of 17 OK created sql table model INS_BKP.bronze_pos_tx_dscnt ................. [[32mSUCCESS 1[0m in 2.61s]
+[0m21:19:01.903656 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_tx_dscnt
+[0m21:19:01.904708 [debug] [Thread-1  ]: Began running node model.development.bronze_pos_tx_line
+[0m21:19:01.906281 [info ] [Thread-1  ]: 10 of 17 START sql table model INS_BKP.bronze_pos_tx_line ...................... [RUN]
+[0m21:19:01.907676 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_tx_dscnt, now model.development.bronze_pos_tx_line)
+[0m21:19:01.908363 [debug] [Thread-1  ]: Began compiling node model.development.bronze_pos_tx_line
+[0m21:19:01.915534 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_line"
+[0m21:19:01.916112 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_line: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_line"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('POS_TX_LN')
+            order by column_index
+[0m21:19:01.916788 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:02.833975 [debug] [Thread-1  ]: SQL status: SUCCESS 54 in 1.0 seconds
+[0m21:19:02.838955 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_pos_tx_line"
+[0m21:19:02.840340 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tx_line (compile): 21:19:01.908704 => 21:19:02.839971
+[0m21:19:02.840928 [debug] [Thread-1  ]: Began executing node model.development.bronze_pos_tx_line
+[0m21:19:02.844643 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_line"
+[0m21:19:02.845995 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_line: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_line"} */
+show parameters like 'query_tag' in session
+[0m21:19:03.028844 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:03.030964 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:19:03.032214 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_line"
+[0m21:19:03.032680 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_line: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_line"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:19:03.230365 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:03.240368 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_pos_tx_line"
+[0m21:19:03.246545 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_line"
+[0m21:19:03.247431 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_line: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_line"} */
+create or replace transient table insight_dev.INS_BKP.bronze_pos_tx_line
+         as
+        (
+
+
+with POS_TX_LINE as (
+    select * exclude rn from (
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS SALE_LINE_NBR,
+        
+            value:c2:: NUMBER(38,4) AS PROCESS_DT,
+        
+            value:c3:: NUMBER(38,4) AS DIVISON_NUMBER,
+        
+            value:c4:: NUMBER(38,4) AS TX_NBR,
+        
+            value:c5:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c6:: NUMBER(38,4) AS POS_LOC_ID,
+        
+            value:c7:: NUMBER(38,4) AS TERM_NBR,
+        
+            value:c8:: NUMBER(38,4) AS BIZ_DT,
+        
+            value:c9:: TEXT AS ADJ_FLG,
+        
+            value:c10:: NUMBER(38,4) AS STORE_ID,
+        
+            value:c11:: NUMBER(38,4) AS PROMO_CD,
+        
+            value:c12:: NUMBER(38,4) AS DSKU_ID,
+        
+            value:c13:: NUMBER(38,4) AS CSKU_ID,
+        
+            value:c14:: NUMBER(38,4) AS LINE_GRP_NBR,
+        
+            value:c15:: BOOLEAN AS PREORD_FLG,
+        
+            value:c16:: NUMBER(38,4) AS INV_RLS_LOC,
+        
+            value:c17:: NUMBER(38,4) AS UNIT_PRICE,
+        
+            value:c18:: NUMBER(38,4) AS ITEM_QTY,
+        
+            value:c19:: NUMBER(38,4) AS EXT_RTL,
+        
+            value:c20:: NUMBER(38,4) AS PRICE_OVERRIDE,
+        
+            value:c21:: NUMBER(38,4) AS ORIG_PRICE,
+        
+            value:c22:: BOOLEAN AS POST_TO_MCS,
+        
+            value:c23:: TEXT AS DUTY_TYPE,
+        
+            value:c24:: BOOLEAN AS TAX_FLG_1,
+        
+            value:c25:: TEXT AS TAX_FLG_2,
+        
+            value:c26:: BOOLEAN AS TAX_FLG_3,
+        
+            value:c27:: BOOLEAN AS TAX_FLG_4,
+        
+            value:c28:: NUMBER(38,4) AS LOCAL_TAX_1,
+        
+            value:c29:: NUMBER(38,4) AS LOCAL_TAX_2,
+        
+            value:c30:: NUMBER(38,4) AS LOCAL_TAX_3,
+        
+            value:c31:: NUMBER(38,4) AS LOCAL_TAX_4,
+        
+            value:c32:: NUMBER(38,4) AS RTL_EMBED_TAX,
+        
+            value:c33:: NUMBER(38,4) AS RTL_EMBED_TAX_RATE,
+        
+            value:c34:: NUMBER(38,4) AS LOCAL_NET_AMT,
+        
+            value:c35:: NUMBER(38,4) AS HOST_NET_AMT,
+        
+            value:c36:: NUMBER(38,4) AS HOST_TAX_1,
+        
+            value:c37:: NUMBER(38,4) AS HOST_TAX_2,
+        
+            value:c38:: NUMBER(38,4) AS HOST_TAX_3,
+        
+            value:c39:: NUMBER(38,4) AS HOST_TAX_4,
+        
+            value:c40:: NUMBER(38,4) AS SA_ID,
+        
+            value:c41:: NUMBER(38,4) AS COUP_CD,
+        
+            value:c42:: TEXT AS COUP_NBR,
+        
+            value:c43:: NUMBER(38,4) AS ORIG_SA_ID,
+        
+            value:c44:: NUMBER(38,4) AS RCPT_SEQ_NBR,
+        
+            value:c45:: NUMBER(38,4) AS ENT_DATA,
+        
+            value:c46:: TEXT AS DIV_DATA_1,
+        
+            value:c47:: TEXT AS DIV_DATA_2,
+        
+            value:c48:: NUMBER(38,4) AS PLU_LOC_NBR,
+        
+            value:c49:: TEXT AS NOT_AUTH_FLG,
+        
+            value:c50:: TEXT AS ITEM_PICK_TYPE,
+        
+            value:c51:: NUMBER(38,4) AS HOST_CURR_UNIT_PRICE,
+        
+            value:c52:: NUMBER(38,4) AS HOST_CURR_EXT_PRICE,
+        
+            value:c53:: NUMBER(38,4) AS DUTY_PAY_AMT,
+        
+            value:c54:: TEXT AS IGATE_REFERENCE,
+            
+    
+        HASH(concat_ws('~',sale_line_nbr,tx_nbr,term_nbr,divison_number,pos_loc_id,div_nbr)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by sale_line_nbr,tx_nbr,term_nbr,divison_number,pos_loc_id,div_nbr order by 1) as rn
+
+        from insight_dev.ins_bkp.ext_pos_tx_ln
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+
+select * from POS_TX_LINE
+        );
+[0m21:19:03.927063 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:03.929604 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:19:03.930408 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_pos_tx_line"
+[0m21:19:03.930742 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_line: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_pos_tx_line"} */
+alter session unset query_tag
+[0m21:19:04.152067 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:04.155142 [debug] [Thread-1  ]: Timing info for model.development.bronze_pos_tx_line (execute): 21:19:02.841216 => 21:19:04.154850
+[0m21:19:04.155706 [debug] [Thread-1  ]: On model.development.bronze_pos_tx_line: Close
+[0m21:19:04.516886 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed605ef580>]}
+[0m21:19:04.519140 [info ] [Thread-1  ]: 10 of 17 OK created sql table model INS_BKP.bronze_pos_tx_line ................. [[32mSUCCESS 1[0m in 2.61s]
+[0m21:19:04.521029 [debug] [Thread-1  ]: Finished running node model.development.bronze_pos_tx_line
+[0m21:19:04.521963 [debug] [Thread-1  ]: Began running node model.development.bronze_rfnd_orgnl_tx_rfrnc
+[0m21:19:04.523089 [info ] [Thread-1  ]: 11 of 17 START sql table model INS_BKP.bronze_rfnd_orgnl_tx_rfrnc .............. [RUN]
+[0m21:19:04.524856 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_pos_tx_line, now model.development.bronze_rfnd_orgnl_tx_rfrnc)
+[0m21:19:04.525768 [debug] [Thread-1  ]: Began compiling node model.development.bronze_rfnd_orgnl_tx_rfrnc
+[0m21:19:04.535475 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_rfnd_orgnl_tx_rfrnc"
+[0m21:19:04.536602 [debug] [Thread-1  ]: On model.development.bronze_rfnd_orgnl_tx_rfrnc: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_rfnd_orgnl_tx_rfrnc"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('RFND_TX_RF')
+            order by column_index
+[0m21:19:04.537764 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:05.492897 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m21:19:05.496356 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_rfnd_orgnl_tx_rfrnc"
+[0m21:19:05.497401 [debug] [Thread-1  ]: Timing info for model.development.bronze_rfnd_orgnl_tx_rfrnc (compile): 21:19:04.526244 => 21:19:05.496971
+[0m21:19:05.498244 [debug] [Thread-1  ]: Began executing node model.development.bronze_rfnd_orgnl_tx_rfrnc
+[0m21:19:05.502631 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_rfnd_orgnl_tx_rfrnc"
+[0m21:19:05.503649 [debug] [Thread-1  ]: On model.development.bronze_rfnd_orgnl_tx_rfrnc: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_rfnd_orgnl_tx_rfrnc"} */
+show parameters like 'query_tag' in session
+[0m21:19:05.715549 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:05.717385 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:19:05.718494 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_rfnd_orgnl_tx_rfrnc"
+[0m21:19:05.718923 [debug] [Thread-1  ]: On model.development.bronze_rfnd_orgnl_tx_rfrnc: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_rfnd_orgnl_tx_rfrnc"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:19:05.936007 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:05.951058 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_rfnd_orgnl_tx_rfrnc"
+[0m21:19:05.952910 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_rfnd_orgnl_tx_rfrnc"
+[0m21:19:05.954134 [debug] [Thread-1  ]: On model.development.bronze_rfnd_orgnl_tx_rfrnc: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_rfnd_orgnl_tx_rfrnc"} */
+create or replace transient table insight_dev.INS_BKP.bronze_rfnd_orgnl_tx_rfrnc
+         as
+        (
+
+with RFND_ORGNL_TX_RFRNC as (
+    select * exclude rn from (
+     select
+		
+        
+        
+            
+    
+        HASH(concat_ws('~',ORIG_TX_NBR,ORIG_TERM_NBR)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by ORIG_TX_NBR,ORIG_TERM_NBR order by 1) as rn
+        from insight_dev.ins_bkp.ext_rfnd_tx_rf
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+
+select * from RFND_ORGNL_TX_RFRNC
+        );
+[0m21:19:06.210652 [debug] [Thread-1  ]: Snowflake adapter: Snowflake query id: 01ade335-3200-d1c2-0002-b102315bb643
+[0m21:19:06.211683 [debug] [Thread-1  ]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 13 at position 27
+invalid identifier 'ORIG_TX_NBR'
+[0m21:19:06.213005 [debug] [Thread-1  ]: Timing info for model.development.bronze_rfnd_orgnl_tx_rfrnc (execute): 21:19:05.498589 => 21:19:06.212615
+[0m21:19:06.213624 [debug] [Thread-1  ]: On model.development.bronze_rfnd_orgnl_tx_rfrnc: Close
+[0m21:19:06.576575 [debug] [Thread-1  ]: Database Error in model bronze_rfnd_orgnl_tx_rfrnc (models/bronze/bronze_rfnd_orgnl_tx_rfrnc.sql)
+  000904 (42000): SQL compilation error: error line 13 at position 27
+  invalid identifier 'ORIG_TX_NBR'
+  compiled Code at target/run/development/models/bronze/bronze_rfnd_orgnl_tx_rfrnc.sql
+[0m21:19:06.577236 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620fd370>]}
+[0m21:19:06.578194 [error] [Thread-1  ]: 11 of 17 ERROR creating sql table model INS_BKP.bronze_rfnd_orgnl_tx_rfrnc ..... [[31mERROR[0m in 2.05s]
+[0m21:19:06.578826 [debug] [Thread-1  ]: Finished running node model.development.bronze_rfnd_orgnl_tx_rfrnc
+[0m21:19:06.579390 [debug] [Thread-1  ]: Began running node model.development.bronze_tndr_type
+[0m21:19:06.580103 [info ] [Thread-1  ]: 12 of 17 START sql table model INS_BKP.bronze_tndr_type ........................ [RUN]
+[0m21:19:06.581110 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_rfnd_orgnl_tx_rfrnc, now model.development.bronze_tndr_type)
+[0m21:19:06.581447 [debug] [Thread-1  ]: Began compiling node model.development.bronze_tndr_type
+[0m21:19:06.592590 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tndr_type"
+[0m21:19:06.593763 [debug] [Thread-1  ]: On model.development.bronze_tndr_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tndr_type"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('TNDR_TYPE')
+            order by column_index
+[0m21:19:06.595592 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:07.646279 [debug] [Thread-1  ]: SQL status: SUCCESS 6 in 1.0 seconds
+[0m21:19:07.648831 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_tndr_type"
+[0m21:19:07.649613 [debug] [Thread-1  ]: Timing info for model.development.bronze_tndr_type (compile): 21:19:06.581736 => 21:19:07.649327
+[0m21:19:07.650202 [debug] [Thread-1  ]: Began executing node model.development.bronze_tndr_type
+[0m21:19:07.654215 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tndr_type"
+[0m21:19:07.654659 [debug] [Thread-1  ]: On model.development.bronze_tndr_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tndr_type"} */
+show parameters like 'query_tag' in session
+[0m21:19:07.833927 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:07.836003 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:19:07.837112 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tndr_type"
+[0m21:19:07.837599 [debug] [Thread-1  ]: On model.development.bronze_tndr_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tndr_type"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:19:08.036394 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:08.048071 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_tndr_type"
+[0m21:19:08.050419 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tndr_type"
+[0m21:19:08.051165 [debug] [Thread-1  ]: On model.development.bronze_tndr_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tndr_type"} */
+create or replace transient table insight_dev.INS_BKP.bronze_tndr_type
+         as
+        (
+
+
+with TNDR_TYPE as (
+    select * exclude rn from (
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c2:: NUMBER(38,4) AS TEN_TYPE,
+        
+            value:c3:: TEXT AS SHORT_DESC,
+        
+            value:c4:: TEXT AS LONG_DESC,
+        
+            value:c5:: TEXT AS CURR_CARD_TYPE,
+        
+            value:c6:: NUMBER(38,4) AS SRC_UPDT_DT,
+            
+    
+        HASH(concat_ws('~',ten_type,div_nbr)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by ten_type,div_nbr order by 1) as rn
+        from insight_dev.ins_bkp.ext_tndr_type
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+
+)
+
+select * from TNDR_TYPE
+        );
+[0m21:19:08.735519 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:08.739175 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:19:08.740165 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tndr_type"
+[0m21:19:08.740650 [debug] [Thread-1  ]: On model.development.bronze_tndr_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tndr_type"} */
+alter session unset query_tag
+[0m21:19:09.070572 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:09.074023 [debug] [Thread-1  ]: Timing info for model.development.bronze_tndr_type (execute): 21:19:07.650524 => 21:19:09.073732
+[0m21:19:09.074503 [debug] [Thread-1  ]: On model.development.bronze_tndr_type: Close
+[0m21:19:09.410428 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed60631bb0>]}
+[0m21:19:09.411558 [info ] [Thread-1  ]: 12 of 17 OK created sql table model INS_BKP.bronze_tndr_type ................... [[32mSUCCESS 1[0m in 2.83s]
+[0m21:19:09.412662 [debug] [Thread-1  ]: Finished running node model.development.bronze_tndr_type
+[0m21:19:09.413566 [debug] [Thread-1  ]: Began running node model.development.bronze_tx_type
+[0m21:19:09.414213 [info ] [Thread-1  ]: 13 of 17 START sql table model INS_BKP.bronze_tx_type .......................... [RUN]
+[0m21:19:09.415446 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_tndr_type, now model.development.bronze_tx_type)
+[0m21:19:09.416367 [debug] [Thread-1  ]: Began compiling node model.development.bronze_tx_type
+[0m21:19:09.427349 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tx_type"
+[0m21:19:09.428117 [debug] [Thread-1  ]: On model.development.bronze_tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tx_type"} */
+select
+            'value:c' || to_varchar(column_index+1) || ':: ' || type || ' AS ' || column_Name
+            from insight_dev.INS_BKP.config_schema
+            where database_name= upper('insight_dev')
+            and schema_name = upper('INS_BKP')
+            and table_name= upper('TX_TYPE')
+            order by column_index
+[0m21:19:09.428626 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:10.391165 [debug] [Thread-1  ]: SQL status: SUCCESS 4 in 1.0 seconds
+[0m21:19:10.396021 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.bronze_tx_type"
+[0m21:19:10.397958 [debug] [Thread-1  ]: Timing info for model.development.bronze_tx_type (compile): 21:19:09.416803 => 21:19:10.397050
+[0m21:19:10.398908 [debug] [Thread-1  ]: Began executing node model.development.bronze_tx_type
+[0m21:19:10.404728 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tx_type"
+[0m21:19:10.405689 [debug] [Thread-1  ]: On model.development.bronze_tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tx_type"} */
+show parameters like 'query_tag' in session
+[0m21:19:10.574132 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:10.575893 [debug] [Thread-1  ]: Setting query_tag to 'INSIGHT_POS_SG_BRONZE'. Will reset to '' after materialization.
+[0m21:19:10.576774 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tx_type"
+[0m21:19:10.577632 [debug] [Thread-1  ]: On model.development.bronze_tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tx_type"} */
+alter session set query_tag = 'INSIGHT_POS_SG_BRONZE'
+[0m21:19:10.765030 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:10.774335 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.bronze_tx_type"
+[0m21:19:10.775626 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tx_type"
+[0m21:19:10.775955 [debug] [Thread-1  ]: On model.development.bronze_tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tx_type"} */
+create or replace transient table insight_dev.INS_BKP.bronze_tx_type
+         as
+        (
+
+
+with TX_TYPE as (
+    select * exclude rn from (
+     select
+		
+        
+        
+        
+            value:c1:: NUMBER(38,4) AS DIV_NBR,
+        
+            value:c2:: NUMBER(38,4) AS APP_CD,
+        
+            value:c3:: NUMBER(38,4) AS TX_TYPE,
+        
+            value:c4:: TEXT AS SHORT_DESC,
+            
+    
+        HASH(concat_ws('~',div_nbr,app_cd,tx_type)) as bsns_key,
+        20230706110040 as run_id,
+        row_number() over(partition by div_nbr,app_cd,tx_type order by 1) as rn
+        from insight_dev.ins_bkp.ext_tx_type
+        where
+        division =  'SG'
+        and run_dt = substr('20230706110040',0,8)
+    )
+    where rn =1
+)
+
+select * from TX_TYPE
+        );
+[0m21:19:11.385096 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:11.388095 [debug] [Thread-1  ]: No original query_tag, unsetting parameter.
+[0m21:19:11.390466 [debug] [Thread-1  ]: Using snowflake connection "model.development.bronze_tx_type"
+[0m21:19:11.391179 [debug] [Thread-1  ]: On model.development.bronze_tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.bronze_tx_type"} */
+alter session unset query_tag
+[0m21:19:11.618471 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:11.621716 [debug] [Thread-1  ]: Timing info for model.development.bronze_tx_type (execute): 21:19:10.399555 => 21:19:11.621295
+[0m21:19:11.624517 [debug] [Thread-1  ]: On model.development.bronze_tx_type: Close
+[0m21:19:12.023075 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed605f8610>]}
+[0m21:19:12.024254 [info ] [Thread-1  ]: 13 of 17 OK created sql table model INS_BKP.bronze_tx_type ..................... [[32mSUCCESS 1[0m in 2.61s]
+[0m21:19:12.025436 [debug] [Thread-1  ]: Finished running node model.development.bronze_tx_type
+[0m21:19:12.026092 [debug] [Thread-1  ]: Began running node model.development.dvsn
+[0m21:19:12.026749 [info ] [Thread-1  ]: 14 of 17 START sql incremental model INS_BKP.dvsn .............................. [RUN]
+[0m21:19:12.028301 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.bronze_tx_type, now model.development.dvsn)
+[0m21:19:12.029012 [debug] [Thread-1  ]: Began compiling node model.development.dvsn
+[0m21:19:12.034462 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.dvsn"
+[0m21:19:12.035253 [debug] [Thread-1  ]: Timing info for model.development.dvsn (compile): 21:19:12.029489 => 21:19:12.035012
+[0m21:19:12.036293 [debug] [Thread-1  ]: Began executing node model.development.dvsn
+[0m21:19:12.097500 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:12.098282 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+create or replace  temporary view insight_dev.INS_BKP.dvsn__dbt_tmp
+  
+   as (
+    --checking if commits
+
+
+with delta as (
+    select
+            dvsn_seq.nextval as DVSN_SRRGT_KEY,
+            brz.DIV_NBR as DVSN_NBR,
+            brz.DIV_NAME  as DVSN_NAME,
+            null as DVSN_ABBRV_NAME,
+            brz.ADDR_LINE_1  as ADDRSS_LINE_1,
+            brz.ADDR_LINE_2  as ADDRSS_LINE_2,
+            brz.ADDR_LINE_3 as ADDRSS_LINE_3,
+            brz.CITY as CITY,
+            brz.STATE as STATE,
+            brz.ZIP_CD as ZIP_CD,
+            null as DVSN_TYPE,
+            null as DVSN_SKU_TYPE,
+            null as DVSN_SKU_STATUS,
+            null as DFS_WRLDWD,
+            brz.DVSN_RPT_HDNG as DVSN_RPT_HDNG,
+            brz.WRITE_OFF_DESC_1 as WRITE_OFF_DSCRPTN_1,
+            brz.WRIRE_OFF_DESC_2 as WRITE_OFF_DSCRPTN_2,
+            brz.DT_FORMAT_CD as DT_FORMAT_CD,
+            brz.SALES_CTL_NBR as SALES_CNTRL_NBR,
+            brz.CNCL_PO_DAYS as CNCL_PO_DAYS,
+            brz.CNCL_PO_DAYS_PCT as CNCL_PO_DAYS_PCT,
+            brz.CURR_CD as CRRNCY_CD,
+            brz.MULT_OTB_PRES as MULT_OTB_PRDS,
+            brz.MULT_UNIT_RTL as MULT_UNIT_RTL,
+            brz.MULT_DEPT_IN_PO as MULT_DPRTMNT_IN_PO,
+            brz.MOD_CHK_ROUTINE as MDLS_CHCK_ROUTINE,
+            brz.INV_VAR_PCT as INVC_VAR_PCT,
+            brz.INV_VAR_AMT as INVC_VAR_AMNT,
+            brz.COST_REAVG as COST_REAVG,
+            brz.SALES_PROCESS_FLG as SALES_PRCSSNG_FLG,
+            brz.INV_MIN_CHGBCK_AMT as INVC_MNMM_CHRGBCK_AMNT,
+            brz.CUSTOMS_FLG as CUSTOMS_FLG,
+            brz.EXCH_RATE_VAR as EXCHNG_RATE_VAR,
+            brz.INV_CUTOFF_DAY as INVC_CUTOFF_DAY,
+            brz.PLAN_LVL as PLAN_LVL,
+            brz.PRICE_LKUP_FLG as PRICE_LKP_FLG,
+            brz.TRAD_COMP_CD as TRDNG_CMPNY_CD,
+            brz.DB_COST_FLG as DB_COST_FLG,
+            brz.CREATE_PREORD_TRANS_AUD_REC as CREATE_PRORDR_TRNSFR_ADT_RCRD,
+            brz.POPI_CNT_FLG as POPI_CNT_FLG,
+            brz.RCENT_CD as RCNET_CD,
+            brz.AUTO_WRITE_OFF_LIMIT as AUTMTD_WRITE_OFF_LIMIT,
+            brz.MRPU_ENTRY as MRPU_ENTRY,
+            brz.SCLS_REALIGN_DUR_PI as SCLSS_REALIGN_DRNG_PI,
+            brz.bsns_key as bsns_key,
+            brz.run_id as run_id,
+            false as is_suspended ,
+            null as spns_rvrsl_timestamp
+    from
+            insight_dev.INS_BKP.bronze_division brz
+            
+
+)
+
+select *  from delta
+  );
+[0m21:19:12.098812 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:13.355043 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:13.368685 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:13.370243 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+describe table insight_dev.INS_BKP.dvsn__dbt_tmp
+[0m21:19:13.698507 [debug] [Thread-1  ]: SQL status: SUCCESS 48 in 0.0 seconds
+[0m21:19:13.706317 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:13.706762 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+describe table insight_dev.INS_BKP.dvsn
+[0m21:19:13.923656 [debug] [Thread-1  ]: SQL status: SUCCESS 48 in 0.0 seconds
+[0m21:19:13.933999 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:13.934489 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+describe table "INSIGHT_DEV"."INS_BKP"."DVSN"
+[0m21:19:14.176014 [debug] [Thread-1  ]: SQL status: SUCCESS 48 in 0.0 seconds
+[0m21:19:14.221513 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.dvsn"
+[0m21:19:14.226118 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:14.226949 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m21:19:14.473413 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:14.474637 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:14.475509 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+merge into insight_dev.INS_BKP.dvsn as DBT_INTERNAL_DEST
+        using insight_dev.INS_BKP.dvsn__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.bsns_key = DBT_INTERNAL_DEST.bsns_key
+            )
+
+    
+    when matched then update set
+        "DVSN_NBR" = DBT_INTERNAL_SOURCE."DVSN_NBR","DVSN_NAME" = DBT_INTERNAL_SOURCE."DVSN_NAME","DVSN_ABBRV_NAME" = DBT_INTERNAL_SOURCE."DVSN_ABBRV_NAME","ADDRSS_LINE_1" = DBT_INTERNAL_SOURCE."ADDRSS_LINE_1","ADDRSS_LINE_2" = DBT_INTERNAL_SOURCE."ADDRSS_LINE_2","ADDRSS_LINE_3" = DBT_INTERNAL_SOURCE."ADDRSS_LINE_3","CITY" = DBT_INTERNAL_SOURCE."CITY","STATE" = DBT_INTERNAL_SOURCE."STATE","ZIP_CD" = DBT_INTERNAL_SOURCE."ZIP_CD","DVSN_TYPE" = DBT_INTERNAL_SOURCE."DVSN_TYPE","DVSN_SKU_TYPE" = DBT_INTERNAL_SOURCE."DVSN_SKU_TYPE","DVSN_SKU_STATUS" = DBT_INTERNAL_SOURCE."DVSN_SKU_STATUS","DFS_WRLDWD" = DBT_INTERNAL_SOURCE."DFS_WRLDWD","DVSN_RPT_HDNG" = DBT_INTERNAL_SOURCE."DVSN_RPT_HDNG","WRITE_OFF_DSCRPTN_1" = DBT_INTERNAL_SOURCE."WRITE_OFF_DSCRPTN_1","WRITE_OFF_DSCRPTN_2" = DBT_INTERNAL_SOURCE."WRITE_OFF_DSCRPTN_2","DT_FORMAT_CD" = DBT_INTERNAL_SOURCE."DT_FORMAT_CD","SALES_CNTRL_NBR" = DBT_INTERNAL_SOURCE."SALES_CNTRL_NBR","CNCL_PO_DAYS" = DBT_INTERNAL_SOURCE."CNCL_PO_DAYS","CNCL_PO_DAYS_PCT" = DBT_INTERNAL_SOURCE."CNCL_PO_DAYS_PCT","CRRNCY_CD" = DBT_INTERNAL_SOURCE."CRRNCY_CD","MULT_OTB_PRDS" = DBT_INTERNAL_SOURCE."MULT_OTB_PRDS","MULT_UNIT_RTL" = DBT_INTERNAL_SOURCE."MULT_UNIT_RTL","MULT_DPRTMNT_IN_PO" = DBT_INTERNAL_SOURCE."MULT_DPRTMNT_IN_PO","MDLS_CHCK_ROUTINE" = DBT_INTERNAL_SOURCE."MDLS_CHCK_ROUTINE","INVC_VAR_PCT" = DBT_INTERNAL_SOURCE."INVC_VAR_PCT","INVC_VAR_AMNT" = DBT_INTERNAL_SOURCE."INVC_VAR_AMNT","COST_REAVG" = DBT_INTERNAL_SOURCE."COST_REAVG","SALES_PRCSSNG_FLG" = DBT_INTERNAL_SOURCE."SALES_PRCSSNG_FLG","INVC_MNMM_CHRGBCK_AMNT" = DBT_INTERNAL_SOURCE."INVC_MNMM_CHRGBCK_AMNT","CUSTOMS_FLG" = DBT_INTERNAL_SOURCE."CUSTOMS_FLG","EXCHNG_RATE_VAR" = DBT_INTERNAL_SOURCE."EXCHNG_RATE_VAR","INVC_CUTOFF_DAY" = DBT_INTERNAL_SOURCE."INVC_CUTOFF_DAY","PLAN_LVL" = DBT_INTERNAL_SOURCE."PLAN_LVL","PRICE_LKP_FLG" = DBT_INTERNAL_SOURCE."PRICE_LKP_FLG","TRDNG_CMPNY_CD" = DBT_INTERNAL_SOURCE."TRDNG_CMPNY_CD","DB_COST_FLG" = DBT_INTERNAL_SOURCE."DB_COST_FLG","CREATE_PRORDR_TRNSFR_ADT_RCRD" = DBT_INTERNAL_SOURCE."CREATE_PRORDR_TRNSFR_ADT_RCRD","POPI_CNT_FLG" = DBT_INTERNAL_SOURCE."POPI_CNT_FLG","RCNET_CD" = DBT_INTERNAL_SOURCE."RCNET_CD","AUTMTD_WRITE_OFF_LIMIT" = DBT_INTERNAL_SOURCE."AUTMTD_WRITE_OFF_LIMIT","MRPU_ENTRY" = DBT_INTERNAL_SOURCE."MRPU_ENTRY","SCLSS_REALIGN_DRNG_PI" = DBT_INTERNAL_SOURCE."SCLSS_REALIGN_DRNG_PI","BSNS_KEY" = DBT_INTERNAL_SOURCE."BSNS_KEY","RUN_ID" = DBT_INTERNAL_SOURCE."RUN_ID","IS_SUSPENDED" = DBT_INTERNAL_SOURCE."IS_SUSPENDED","SPNS_RVRSL_TIMESTAMP" = DBT_INTERNAL_SOURCE."SPNS_RVRSL_TIMESTAMP"
+    
+
+    when not matched then insert
+        ("DVSN_SRRGT_KEY", "DVSN_NBR", "DVSN_NAME", "DVSN_ABBRV_NAME", "ADDRSS_LINE_1", "ADDRSS_LINE_2", "ADDRSS_LINE_3", "CITY", "STATE", "ZIP_CD", "DVSN_TYPE", "DVSN_SKU_TYPE", "DVSN_SKU_STATUS", "DFS_WRLDWD", "DVSN_RPT_HDNG", "WRITE_OFF_DSCRPTN_1", "WRITE_OFF_DSCRPTN_2", "DT_FORMAT_CD", "SALES_CNTRL_NBR", "CNCL_PO_DAYS", "CNCL_PO_DAYS_PCT", "CRRNCY_CD", "MULT_OTB_PRDS", "MULT_UNIT_RTL", "MULT_DPRTMNT_IN_PO", "MDLS_CHCK_ROUTINE", "INVC_VAR_PCT", "INVC_VAR_AMNT", "COST_REAVG", "SALES_PRCSSNG_FLG", "INVC_MNMM_CHRGBCK_AMNT", "CUSTOMS_FLG", "EXCHNG_RATE_VAR", "INVC_CUTOFF_DAY", "PLAN_LVL", "PRICE_LKP_FLG", "TRDNG_CMPNY_CD", "DB_COST_FLG", "CREATE_PRORDR_TRNSFR_ADT_RCRD", "POPI_CNT_FLG", "RCNET_CD", "AUTMTD_WRITE_OFF_LIMIT", "MRPU_ENTRY", "SCLSS_REALIGN_DRNG_PI", "BSNS_KEY", "RUN_ID", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+    values
+        ("DVSN_SRRGT_KEY", "DVSN_NBR", "DVSN_NAME", "DVSN_ABBRV_NAME", "ADDRSS_LINE_1", "ADDRSS_LINE_2", "ADDRSS_LINE_3", "CITY", "STATE", "ZIP_CD", "DVSN_TYPE", "DVSN_SKU_TYPE", "DVSN_SKU_STATUS", "DFS_WRLDWD", "DVSN_RPT_HDNG", "WRITE_OFF_DSCRPTN_1", "WRITE_OFF_DSCRPTN_2", "DT_FORMAT_CD", "SALES_CNTRL_NBR", "CNCL_PO_DAYS", "CNCL_PO_DAYS_PCT", "CRRNCY_CD", "MULT_OTB_PRDS", "MULT_UNIT_RTL", "MULT_DPRTMNT_IN_PO", "MDLS_CHCK_ROUTINE", "INVC_VAR_PCT", "INVC_VAR_AMNT", "COST_REAVG", "SALES_PRCSSNG_FLG", "INVC_MNMM_CHRGBCK_AMNT", "CUSTOMS_FLG", "EXCHNG_RATE_VAR", "INVC_CUTOFF_DAY", "PLAN_LVL", "PRICE_LKP_FLG", "TRDNG_CMPNY_CD", "DB_COST_FLG", "CREATE_PRORDR_TRNSFR_ADT_RCRD", "POPI_CNT_FLG", "RCNET_CD", "AUTMTD_WRITE_OFF_LIMIT", "MRPU_ENTRY", "SCLSS_REALIGN_DRNG_PI", "BSNS_KEY", "RUN_ID", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+
+;
+[0m21:19:15.006400 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m21:19:15.007386 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:15.008184 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+COMMIT
+[0m21:19:15.269224 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:15.282859 [debug] [Thread-1  ]: Using snowflake connection "model.development.dvsn"
+[0m21:19:15.283552 [debug] [Thread-1  ]: On model.development.dvsn: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.dvsn"} */
+drop view if exists insight_dev.INS_BKP.dvsn__dbt_tmp cascade
+[0m21:19:15.608226 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:15.613765 [debug] [Thread-1  ]: Timing info for model.development.dvsn (execute): 21:19:12.036656 => 21:19:15.613307
+[0m21:19:15.614634 [debug] [Thread-1  ]: On model.development.dvsn: Close
+[0m21:19:15.925439 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed620fd190>]}
+[0m21:19:15.926358 [info ] [Thread-1  ]: 14 of 17 OK created sql incremental model INS_BKP.dvsn ......................... [[32mSUCCESS 0[0m in 3.90s]
+[0m21:19:15.927091 [debug] [Thread-1  ]: Finished running node model.development.dvsn
+[0m21:19:15.928574 [debug] [Thread-1  ]: Began running node model.development.pos_shop
+[0m21:19:15.929308 [info ] [Thread-1  ]: 15 of 17 START sql incremental model INS_BKP.pos_shop .......................... [RUN]
+[0m21:19:15.930419 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.dvsn, now model.development.pos_shop)
+[0m21:19:15.931122 [debug] [Thread-1  ]: Began compiling node model.development.pos_shop
+[0m21:19:15.936947 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.pos_shop"
+[0m21:19:15.939192 [debug] [Thread-1  ]: Timing info for model.development.pos_shop (compile): 21:19:15.931580 => 21:19:15.938784
+[0m21:19:15.939560 [debug] [Thread-1  ]: Began executing node model.development.pos_shop
+[0m21:19:15.948667 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:15.949178 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+create or replace  temporary view insight_dev.INS_BKP.pos_shop__dbt_tmp
+  
+   as (
+    
+
+with delta as (
+    select
+            pos_shop_seq.nextval as POS_SHOP_SRRGT_KEY,
+            brz.POS_LOCATION_ID as poc_lctn_id,
+            brz.DIVISON_NUMBER as dvsn_nbr,
+            brz.bsns_key as bsns_key,
+            brz.run_id as run_id,
+            nvl(dvsn.dvsn_srrgt_key,'-1') as dvsn_srrgt_key,
+            case when nvl(dvsn.dvsn_srrgt_key,'-1') = '-1' then true else false end as is_suspended ,
+            null as spns_rvrsl_timestamp
+    from
+            insight_dev.INS_BKP.bronze_pos_shop brz
+    LEFT OUTER JOIN insight_dev.INS_BKP.dvsn dvsn
+            on brz.DIVISON_NUMBER=dvsn.dvsn_nbr
+            
+
+    union all
+
+    select
+        slv.POS_SHOP_SRRGT_KEY,       
+            slv.poc_lctn_id,
+            slv.dvsn_nbr,
+            slv.bsns_key as bsns_key,
+            slv.run_id as run_id,
+            dvsn.dvsn_srrgt_key as dvsn_srrgt_key,
+            false as is_suspended,
+            current_timestamp as spns_rvrsl_timestamp
+    from
+            insight_dev.INS_BKP.pos_shop slv
+    LEFT OUTER JOIN insight_dev.INS_BKP.dvsn dvsn
+            on slv.dvsn_nbr=dvsn.dvsn_nbr
+    where slv.is_suspended = true
+    and dvsn.dvsn_srrgt_key is not null
+
+),
+
+ranked_dataset as (
+    select *,
+    row_number() over (partition by bsns_key order by run_id desc) as rn 
+    from
+    delta
+)
+
+select * exclude rn from ranked_dataset where rn = 1
+  );
+[0m21:19:15.949754 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:17.182565 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:17.186756 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:17.187238 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+describe table insight_dev.INS_BKP.pos_shop__dbt_tmp
+[0m21:19:17.365375 [debug] [Thread-1  ]: SQL status: SUCCESS 8 in 0.0 seconds
+[0m21:19:17.370051 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:17.370451 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+describe table insight_dev.INS_BKP.pos_shop
+[0m21:19:17.542049 [debug] [Thread-1  ]: SQL status: SUCCESS 8 in 0.0 seconds
+[0m21:19:17.546718 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:17.547284 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+describe table "INSIGHT_DEV"."INS_BKP"."POS_SHOP"
+[0m21:19:17.738827 [debug] [Thread-1  ]: SQL status: SUCCESS 8 in 0.0 seconds
+[0m21:19:17.744440 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.pos_shop"
+[0m21:19:17.746096 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:17.746506 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m21:19:17.932532 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:17.933158 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:17.933934 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+merge into insight_dev.INS_BKP.pos_shop as DBT_INTERNAL_DEST
+        using insight_dev.INS_BKP.pos_shop__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.bsns_key = DBT_INTERNAL_DEST.bsns_key
+            )
+
+    
+    when matched then update set
+        "POC_LCTN_ID" = DBT_INTERNAL_SOURCE."POC_LCTN_ID","DVSN_NBR" = DBT_INTERNAL_SOURCE."DVSN_NBR","BSNS_KEY" = DBT_INTERNAL_SOURCE."BSNS_KEY","RUN_ID" = DBT_INTERNAL_SOURCE."RUN_ID","DVSN_SRRGT_KEY" = DBT_INTERNAL_SOURCE."DVSN_SRRGT_KEY","IS_SUSPENDED" = DBT_INTERNAL_SOURCE."IS_SUSPENDED","SPNS_RVRSL_TIMESTAMP" = DBT_INTERNAL_SOURCE."SPNS_RVRSL_TIMESTAMP"
+    
+
+    when not matched then insert
+        ("POS_SHOP_SRRGT_KEY", "POC_LCTN_ID", "DVSN_NBR", "BSNS_KEY", "RUN_ID", "DVSN_SRRGT_KEY", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+    values
+        ("POS_SHOP_SRRGT_KEY", "POC_LCTN_ID", "DVSN_NBR", "BSNS_KEY", "RUN_ID", "DVSN_SRRGT_KEY", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+
+;
+[0m21:19:18.513377 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m21:19:18.514675 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:18.515584 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+COMMIT
+[0m21:19:18.830011 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:18.834544 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_shop"
+[0m21:19:18.835439 [debug] [Thread-1  ]: On model.development.pos_shop: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_shop"} */
+drop view if exists insight_dev.INS_BKP.pos_shop__dbt_tmp cascade
+[0m21:19:19.034379 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:19.037209 [debug] [Thread-1  ]: Timing info for model.development.pos_shop (execute): 21:19:15.939976 => 21:19:19.036729
+[0m21:19:19.038107 [debug] [Thread-1  ]: On model.development.pos_shop: Close
+[0m21:19:19.374571 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63f35fd0>]}
+[0m21:19:19.375660 [info ] [Thread-1  ]: 15 of 17 OK created sql incremental model INS_BKP.pos_shop ..................... [[32mSUCCESS 0[0m in 3.44s]
+[0m21:19:19.376714 [debug] [Thread-1  ]: Finished running node model.development.pos_shop
+[0m21:19:19.377469 [debug] [Thread-1  ]: Began running node model.development.tx_type
+[0m21:19:19.378215 [info ] [Thread-1  ]: 16 of 17 START sql incremental model INS_BKP.tx_type ........................... [RUN]
+[0m21:19:19.380043 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.pos_shop, now model.development.tx_type)
+[0m21:19:19.381021 [debug] [Thread-1  ]: Began compiling node model.development.tx_type
+[0m21:19:19.389010 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.tx_type"
+[0m21:19:19.390092 [debug] [Thread-1  ]: Timing info for model.development.tx_type (compile): 21:19:19.381540 => 21:19:19.389671
+[0m21:19:19.390702 [debug] [Thread-1  ]: Began executing node model.development.tx_type
+[0m21:19:19.408467 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:19.409099 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+create or replace  temporary view insight_dev.INS_BKP.tx_type__dbt_tmp
+  
+   as (
+    
+
+with delta as (
+    select
+        tx_type_seq.nextval as tx_type_srrgt_key,
+        brz.tx_type,
+        brz.app_cd as appln_cd,
+        brz.DIV_NBR as dvsn_nbr,
+        brz.SHORT_DESC as short_dscrptn,
+        brz.bsns_key as bsns_key,
+        brz.run_id as run_id,
+        nvl(dvsn.dvsn_srrgt_key,'-1') as dvsn_srrgt_key,
+        case when nvl(dvsn.dvsn_srrgt_key,'-1') = '-1' then true else false end as is_suspended ,
+        null as spns_rvrsl_timestamp
+    from
+        insight_dev.INS_BKP.bronze_tx_type brz
+    LEFT JOIN insight_dev.INS_BKP.dvsn dvsn
+            on brz.DIV_NBR=dvsn.dvsn_nbr
+
+    union all
+
+    select
+        tx_type_srrgt_key,
+        slv.tx_type,
+        slv.appln_cd,
+        slv.dvsn_nbr,
+        slv.short_dscrptn,
+        slv.bsns_key,
+        slv.run_id,
+        dvsn.dvsn_srrgt_key,
+        false as is_suspended,
+        current_timestamp as spns_rvrsl_timestamp
+    from
+        insight_dev.INS_BKP.tx_type slv
+    LEFT OUTER JOIN insight_dev.INS_BKP.dvsn dvsn
+        on slv.dvsn_nbr=dvsn.dvsn_nbr
+    where slv.is_suspended = true
+    and dvsn.dvsn_srrgt_key is not null
+),
+
+ranked_dataset as (
+    select *,
+    row_number() over (partition by bsns_key order by run_id desc) as rn
+    from delta
+)
+
+select * exclude rn from ranked_dataset where rn = 1
+  );
+[0m21:19:19.409636 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:21.011307 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m21:19:21.015186 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:21.015788 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+describe table insight_dev.INS_BKP.tx_type__dbt_tmp
+[0m21:19:21.209302 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.0 seconds
+[0m21:19:21.215021 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:21.215484 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+describe table insight_dev.INS_BKP.tx_type
+[0m21:19:21.408990 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.0 seconds
+[0m21:19:21.413423 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:21.414106 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+describe table "INSIGHT_DEV"."INS_BKP"."TX_TYPE"
+[0m21:19:21.605539 [debug] [Thread-1  ]: SQL status: SUCCESS 10 in 0.0 seconds
+[0m21:19:21.611179 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.tx_type"
+[0m21:19:21.612978 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:21.613480 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m21:19:21.837347 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:21.837937 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:21.838302 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+merge into insight_dev.INS_BKP.tx_type as DBT_INTERNAL_DEST
+        using insight_dev.INS_BKP.tx_type__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.bsns_key = DBT_INTERNAL_DEST.bsns_key
+            )
+
+    
+    when matched then update set
+        "TX_TYPE" = DBT_INTERNAL_SOURCE."TX_TYPE","APPLN_CD" = DBT_INTERNAL_SOURCE."APPLN_CD","DVSN_NBR" = DBT_INTERNAL_SOURCE."DVSN_NBR","SHORT_DSCRPTN" = DBT_INTERNAL_SOURCE."SHORT_DSCRPTN","BSNS_KEY" = DBT_INTERNAL_SOURCE."BSNS_KEY","RUN_ID" = DBT_INTERNAL_SOURCE."RUN_ID","DVSN_SRRGT_KEY" = DBT_INTERNAL_SOURCE."DVSN_SRRGT_KEY","IS_SUSPENDED" = DBT_INTERNAL_SOURCE."IS_SUSPENDED","SPNS_RVRSL_TIMESTAMP" = DBT_INTERNAL_SOURCE."SPNS_RVRSL_TIMESTAMP"
+    
+
+    when not matched then insert
+        ("TX_TYPE_SRRGT_KEY", "TX_TYPE", "APPLN_CD", "DVSN_NBR", "SHORT_DSCRPTN", "BSNS_KEY", "RUN_ID", "DVSN_SRRGT_KEY", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+    values
+        ("TX_TYPE_SRRGT_KEY", "TX_TYPE", "APPLN_CD", "DVSN_NBR", "SHORT_DSCRPTN", "BSNS_KEY", "RUN_ID", "DVSN_SRRGT_KEY", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+
+;
+[0m21:19:22.320281 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 0.0 seconds
+[0m21:19:22.321724 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:22.322470 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+COMMIT
+[0m21:19:22.575712 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:22.580046 [debug] [Thread-1  ]: Using snowflake connection "model.development.tx_type"
+[0m21:19:22.580635 [debug] [Thread-1  ]: On model.development.tx_type: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.tx_type"} */
+drop view if exists insight_dev.INS_BKP.tx_type__dbt_tmp cascade
+[0m21:19:22.799941 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:22.802737 [debug] [Thread-1  ]: Timing info for model.development.tx_type (execute): 21:19:19.391110 => 21:19:22.802529
+[0m21:19:22.803164 [debug] [Thread-1  ]: On model.development.tx_type: Close
+[0m21:19:23.192122 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed60486dc0>]}
+[0m21:19:23.192869 [info ] [Thread-1  ]: 16 of 17 OK created sql incremental model INS_BKP.tx_type ...................... [[32mSUCCESS 0[0m in 3.81s]
+[0m21:19:23.193475 [debug] [Thread-1  ]: Finished running node model.development.tx_type
+[0m21:19:23.193893 [debug] [Thread-1  ]: Began running node model.development.pos_trmnl
+[0m21:19:23.194287 [info ] [Thread-1  ]: 17 of 17 START sql incremental model INS_BKP.pos_trmnl ......................... [RUN]
+[0m21:19:23.195439 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.development.tx_type, now model.development.pos_trmnl)
+[0m21:19:23.195927 [debug] [Thread-1  ]: Began compiling node model.development.pos_trmnl
+[0m21:19:23.200676 [debug] [Thread-1  ]: Writing injected SQL for node "model.development.pos_trmnl"
+[0m21:19:23.202313 [debug] [Thread-1  ]: Timing info for model.development.pos_trmnl (compile): 21:19:23.196280 => 21:19:23.201667
+[0m21:19:23.202886 [debug] [Thread-1  ]: Began executing node model.development.pos_trmnl
+[0m21:19:23.214893 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:23.215459 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+create or replace  temporary view insight_dev.INS_BKP.pos_trmnl__dbt_tmp
+  
+   as (
+    
+
+with delta as (
+    select
+        pos_trmnl_seq.nextval as pos_trmnl_srrgt_key,
+        ps.POS_SHOP_SRRGT_KEY as pos_shop_srrgt_key,
+        brz.POS_LOCATION_ID as pos_lctn_id,
+        brz.bsns_key as bsns_key,
+        brz.DIVISON_NUMBER as dvsn_nbr,
+        brz.TERMINAL_NUMBER as trmnl_nbr,
+        brz.run_id as run_id,
+        case when nvl(ps.POS_SHOP_SRRGT_KEY,'-1') = '-1' then true else false end as is_suspended,
+        null as spns_rvrsl_timestamp
+    from insight_dev.INS_BKP.bronze_pos_trmnl brz
+    left outer join insight_dev.INS_BKP.pos_shop ps
+        on brz.POS_LOCATION_ID = ps.poc_lctn_id and brz.DIVISON_NUMBER = ps.dvsn_nbr
+
+    union all
+
+    select
+        slv.pos_trmnl_srrgt_key,
+        ps.POS_SHOP_SRRGT_KEY as pos_shop_srrgt_key,
+        slv.pos_lctn_id,
+        slv.bsns_key,
+        slv.dvsn_nbr,
+        slv.trmnl_nbr,
+        slv.run_id as run_id,
+        false as is_suspended,
+        current_timestamp as spns_rvrsl_timestamp
+    from insight_dev.INS_BKP.pos_trmnl slv
+    left outer join insight_dev.INS_BKP.pos_shop ps on slv.pos_lctn_id = ps.poc_lctn_id and slv.dvsn_nbr = ps.dvsn_nbr
+    where slv.is_suspended = true
+        and ps.pos_shop_srrgt_key is not null
+),
+
+
+ranked_dataset as (
+    select *,
+        row_number() over (partition by bsns_key order by run_id desc) as rn
+    from delta
+)
+
+select * exclude rn from ranked_dataset where rn = 1
+  );
+[0m21:19:23.215846 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:19:24.526949 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 1.0 seconds
+[0m21:19:24.532214 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:24.532955 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+describe table insight_dev.INS_BKP.pos_trmnl__dbt_tmp
+[0m21:19:24.758427 [debug] [Thread-1  ]: SQL status: SUCCESS 9 in 0.0 seconds
+[0m21:19:24.761926 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:24.762439 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+describe table insight_dev.INS_BKP.pos_trmnl
+[0m21:19:24.947128 [debug] [Thread-1  ]: SQL status: SUCCESS 9 in 0.0 seconds
+[0m21:19:24.952748 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:24.953306 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+describe table "INSIGHT_DEV"."INS_BKP"."POS_TRMNL"
+[0m21:19:25.138992 [debug] [Thread-1  ]: SQL status: SUCCESS 9 in 0.0 seconds
+[0m21:19:25.142009 [debug] [Thread-1  ]: Writing runtime sql for node "model.development.pos_trmnl"
+[0m21:19:25.143423 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:25.143842 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+-- back compat for old kwarg name
+  
+  begin;
+[0m21:19:25.434809 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:25.435385 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:25.435910 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+merge into insight_dev.INS_BKP.pos_trmnl as DBT_INTERNAL_DEST
+        using insight_dev.INS_BKP.pos_trmnl__dbt_tmp as DBT_INTERNAL_SOURCE
+        on (
+                DBT_INTERNAL_SOURCE.bsns_key = DBT_INTERNAL_DEST.bsns_key
+            )
+
+    
+    when matched then update set
+        "POS_SHOP_SRRGT_KEY" = DBT_INTERNAL_SOURCE."POS_SHOP_SRRGT_KEY","POS_LCTN_ID" = DBT_INTERNAL_SOURCE."POS_LCTN_ID","BSNS_KEY" = DBT_INTERNAL_SOURCE."BSNS_KEY","DVSN_NBR" = DBT_INTERNAL_SOURCE."DVSN_NBR","TRMNL_NBR" = DBT_INTERNAL_SOURCE."TRMNL_NBR","RUN_ID" = DBT_INTERNAL_SOURCE."RUN_ID","IS_SUSPENDED" = DBT_INTERNAL_SOURCE."IS_SUSPENDED","SPNS_RVRSL_TIMESTAMP" = DBT_INTERNAL_SOURCE."SPNS_RVRSL_TIMESTAMP"
+    
+
+    when not matched then insert
+        ("POS_TRMNL_SRRGT_KEY", "POS_SHOP_SRRGT_KEY", "POS_LCTN_ID", "BSNS_KEY", "DVSN_NBR", "TRMNL_NBR", "RUN_ID", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+    values
+        ("POS_TRMNL_SRRGT_KEY", "POS_SHOP_SRRGT_KEY", "POS_LCTN_ID", "BSNS_KEY", "DVSN_NBR", "TRMNL_NBR", "RUN_ID", "IS_SUSPENDED", "SPNS_RVRSL_TIMESTAMP")
+
+;
+[0m21:19:26.357093 [debug] [Thread-1  ]: SQL status: SUCCESS 0 in 1.0 seconds
+[0m21:19:26.357776 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:26.358176 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+COMMIT
+[0m21:19:26.624343 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:26.631692 [debug] [Thread-1  ]: Using snowflake connection "model.development.pos_trmnl"
+[0m21:19:26.632566 [debug] [Thread-1  ]: On model.development.pos_trmnl: /* {"app": "dbt", "dbt_version": "1.5.2", "profile_name": "default", "target_name": "dev", "node_id": "model.development.pos_trmnl"} */
+drop view if exists insight_dev.INS_BKP.pos_trmnl__dbt_tmp cascade
+[0m21:19:26.835453 [debug] [Thread-1  ]: SQL status: SUCCESS 1 in 0.0 seconds
+[0m21:19:26.838101 [debug] [Thread-1  ]: Timing info for model.development.pos_trmnl (execute): 21:19:23.203274 => 21:19:26.837927
+[0m21:19:26.838521 [debug] [Thread-1  ]: On model.development.pos_trmnl: Close
+[0m21:19:27.338744 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '23842413-387b-4307-9536-7542a8f8cd94', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed604310a0>]}
+[0m21:19:27.339709 [info ] [Thread-1  ]: 17 of 17 OK created sql incremental model INS_BKP.pos_trmnl .................... [[32mSUCCESS 0[0m in 4.14s]
+[0m21:19:27.340419 [debug] [Thread-1  ]: Finished running node model.development.pos_trmnl
+[0m21:19:27.343827 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:19:27.344357 [debug] [MainThread]: Connection 'model.development.pos_trmnl' was properly closed.
+[0m21:19:27.345052 [info ] [MainThread]: 
+[0m21:19:27.345488 [info ] [MainThread]: Finished running 13 table models, 4 incremental models in 0 hours 0 minutes and 54.48 seconds (54.48s).
+[0m21:19:27.349279 [debug] [MainThread]: Command end result
+[0m21:19:27.359486 [info ] [MainThread]: 
+[0m21:19:27.360236 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:19:27.360829 [info ] [MainThread]: 
+[0m21:19:27.362283 [error] [MainThread]: [33mDatabase Error in model bronze_rfnd_orgnl_tx_rfrnc (models/bronze/bronze_rfnd_orgnl_tx_rfrnc.sql)[0m
+[0m21:19:27.365220 [error] [MainThread]:   000904 (42000): SQL compilation error: error line 13 at position 27
+[0m21:19:27.366054 [error] [MainThread]:   invalid identifier 'ORIG_TX_NBR'
+[0m21:19:27.366553 [error] [MainThread]:   compiled Code at target/run/development/models/bronze/bronze_rfnd_orgnl_tx_rfrnc.sql
+[0m21:19:27.367259 [info ] [MainThread]: 
+[0m21:19:27.368221 [info ] [MainThread]: Done. PASS=16 WARN=0 ERROR=1 SKIP=0 TOTAL=17
+[0m21:19:27.369465 [debug] [MainThread]: Command `dbt run` failed at 21:19:27.369236 after 54.93 seconds
+[0m21:19:27.370028 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed69ee0220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63ed8160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fed63ed8040>]}
+[0m21:19:27.370771 [debug] [MainThread]: Flushing usage events
+[0m21:27:03.048104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab9f291280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab9dbba820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab9dbbaa90>]}
+
+
+============================== 21:27:03.050425 | 9429fb93-a133-4c5a-8e5a-87f9ba2a0b2b ==============================
+[0m21:27:03.050425 [info ] [MainThread]: Running with dbt=1.5.2
+[0m21:27:03.051114 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/satyam/DFS/dbt_project/dbt/dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/home/satyam/DFS/dbt_project/dbt/dbt/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m21:27:03.316344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9429fb93-a133-4c5a-8e5a-87f9ba2a0b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab992f4d90>]}
+[0m21:27:03.339797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9429fb93-a133-4c5a-8e5a-87f9ba2a0b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab9925cc40>]}
+[0m21:27:03.340644 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m21:27:03.352893 [debug] [MainThread]: checksum: 2435fa7be9fcfa6ffe15da8f202ddc09867bf7d6308330064299ccb85c8646b5, vars: {}, profile: , target: , version: 1.5.2
+[0m21:27:03.376879 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m21:27:03.377529 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m21:27:03.378651 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.development.staging
+[0m21:27:03.388218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9429fb93-a133-4c5a-8e5a-87f9ba2a0b2b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab980e0250>]}
+[0m21:27:03.389122 [info ] [MainThread]: Performance info: /home/satyam/DFS/dbt_project/dbt/dbt/target/perf_info.json
+[0m21:27:03.399922 [debug] [MainThread]: Command `dbt parse` succeeded at 21:27:03.399731 after 0.37 seconds
+[0m21:27:03.400392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab9f291280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab992f4e80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fab992c7130>]}
+[0m21:27:03.400894 [debug] [MainThread]: Flushing usage events
+[0m15:04:52.119283 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a8c0de2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a8aa08850>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a8aa08be0>]}
+
+
+============================== 15:04:52.128991 | 09f9fdc2-3616-42a3-a028-3d2944b2817b ==============================
+[0m15:04:52.128991 [info ] [MainThread]: Running with dbt=1.5.2
+[0m15:04:52.130833 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/satyam/DFS/dbt_project/dbt/dbt', 'log_path': '/home/satyam/DFS/dbt_project/dbt/dbt/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m15:04:52.131759 [info ] [MainThread]: dbt version: 1.5.2
+[0m15:04:52.132637 [info ] [MainThread]: python version: 3.8.10
+[0m15:04:52.133383 [info ] [MainThread]: python path: /usr/bin/python3
+[0m15:04:52.134190 [info ] [MainThread]: os info: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.29
+[0m15:04:52.135007 [info ] [MainThread]: Using profiles.yml file at /home/satyam/DFS/dbt_project/dbt/dbt/profiles.yml
+[0m15:04:52.135871 [info ] [MainThread]: Using dbt_project.yml file at /home/satyam/DFS/dbt_project/dbt/dbt/dbt_project.yml
+[0m15:04:52.136641 [info ] [MainThread]: Configuration:
+[0m15:04:53.170420 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:04:53.231863 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:04:53.232778 [info ] [MainThread]: Required dependencies:
+[0m15:04:53.233550 [debug] [MainThread]: Executing "git --help"
+[0m15:04:53.241913 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:04:53.243492 [debug] [MainThread]: STDERR: "b''"
+[0m15:04:53.244331 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:04:53.245300 [info ] [MainThread]: Connection:
+[0m15:04:53.246682 [info ] [MainThread]:   account: cv97759-dfs
+[0m15:04:53.248034 [info ] [MainThread]:   user: agnit.chatterjee@dfs.com
+[0m15:04:53.249434 [info ] [MainThread]:   database: insight_dev
+[0m15:04:53.250835 [info ] [MainThread]:   schema: INS_BKP
+[0m15:04:53.252432 [info ] [MainThread]:   warehouse: WH_INSIGHT_NONPROD_SYSTM_ETL
+[0m15:04:53.253853 [info ] [MainThread]:   role: INSIGHT_DEV_USER
+[0m15:04:53.261760 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:04:53.263243 [info ] [MainThread]:   query_tag: None
+[0m15:04:53.268133 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m15:04:53.270933 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:04:53.274219 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:04:53.275847 [debug] [MainThread]: On debug: select 1 as id
+[0m15:04:53.276632 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:04:56.365141 [debug] [MainThread]: SQL status: SUCCESS 1 in 3.0 seconds
+[0m15:04:56.369287 [debug] [MainThread]: On debug: Close
+[0m15:04:56.798183 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:04:56.799659 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:04:56.802934 [debug] [MainThread]: Command `dbt debug` succeeded at 15:04:56.802167 after 4.75 seconds
+[0m15:04:56.804806 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:04:56.806374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a8c0de2b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a899d08e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f7a8612f9d0>]}
+[0m15:04:56.808023 [debug] [MainThread]: Flushing usage events
+[0m15:44:44.721139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f451f91f250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f451e242370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f451e242940>]}
+
+
+============================== 15:44:44.731174 | 172175fd-8a5d-4397-ab1a-dfad952db7ee ==============================
+[0m15:44:44.731174 [info ] [MainThread]: Running with dbt=1.5.3
+[0m15:44:44.734432 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/satyam/DFS/dbt_project/dbt/dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/home/satyam/DFS/dbt_project/dbt/dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m15:44:44.736139 [info ] [MainThread]: dbt version: 1.5.3
+[0m15:44:44.737373 [info ] [MainThread]: python version: 3.8.10
+[0m15:44:44.738626 [info ] [MainThread]: python path: /usr/bin/python3
+[0m15:44:44.739797 [info ] [MainThread]: os info: Linux-5.15.90.1-microsoft-standard-WSL2-x86_64-with-glibc2.29
+[0m15:44:44.740741 [info ] [MainThread]: Using profiles.yml file at /home/satyam/DFS/dbt_project/dbt/dbt/profiles.yml
+[0m15:44:44.741696 [info ] [MainThread]: Using dbt_project.yml file at /home/satyam/DFS/dbt_project/dbt/dbt/dbt_project.yml
+[0m15:44:44.742624 [info ] [MainThread]: Configuration:
+[0m15:44:45.217852 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:44:45.335697 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:44:45.337164 [info ] [MainThread]: Required dependencies:
+[0m15:44:45.340443 [debug] [MainThread]: Executing "git --help"
+[0m15:44:45.355237 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:44:45.360688 [debug] [MainThread]: STDERR: "b''"
+[0m15:44:45.362216 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m15:44:45.363735 [info ] [MainThread]: Connection:
+[0m15:44:45.365812 [info ] [MainThread]:   account: cv97759-dfs
+[0m15:44:45.367018 [info ] [MainThread]:   user: agnit.chatterjee@dfs.com
+[0m15:44:45.368197 [info ] [MainThread]:   database: insight_dev
+[0m15:44:45.369225 [info ] [MainThread]:   schema: INS_BKP
+[0m15:44:45.370967 [info ] [MainThread]:   warehouse: WH_INSIGHT_NONPROD_SYSTM_ETL
+[0m15:44:45.371840 [info ] [MainThread]:   role: INSIGHT_DEV_USER
+[0m15:44:45.372848 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:44:45.374914 [info ] [MainThread]:   query_tag: None
+[0m15:44:45.376981 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m15:44:45.378733 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:44:45.381737 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:44:45.383029 [debug] [MainThread]: On debug: select 1 as id
+[0m15:44:45.383747 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:44:47.440882 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.0 seconds
+[0m15:44:47.445286 [debug] [MainThread]: On debug: Close
+[0m15:44:47.825790 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:44:47.827162 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:44:47.829549 [debug] [MainThread]: Command `dbt debug` succeeded at 15:44:47.829134 after 3.16 seconds
+[0m15:44:47.830472 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m15:44:47.831834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f451f91f250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f451d20dfa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f451991ecd0>]}
+[0m15:44:47.832861 [debug] [MainThread]: Flushing usage events
+[0m15:59:13.326978 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f36664bd3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3664def370>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3664def760>]}
+
+
+============================== 15:59:13.333394 | 40b8d9d5-dd91-4858-95ad-ac55084a1722 ==============================
+[0m15:59:13.333394 [info ] [MainThread]: Running with dbt=1.5.3
+[0m15:59:13.334579 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'dbt_project/dbt/dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'dbt_project/dbt/dbt/logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
+[0m15:59:14.024642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '40b8d9d5-dd91-4858-95ad-ac55084a1722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3660488fd0>]}
+[0m15:59:14.076219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '40b8d9d5-dd91-4858-95ad-ac55084a1722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f3660482ee0>]}
+[0m15:59:14.078647 [info ] [MainThread]: Registered adapter: snowflake=1.5.2
+[0m15:59:14.112885 [debug] [MainThread]: checksum: d91324b50612e0c4823cec6657ec795d80c11aba9d5b50e83fb26de63277dec4, vars: {}, profile: , target: , version: 1.5.3
+[0m15:59:14.148526 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m15:59:14.149916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '40b8d9d5-dd91-4858-95ad-ac55084a1722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f36604933a0>]}
+[0m15:59:15.770875 [debug] [MainThread]: 1699: static parser successfully parsed gold/gold_divison.sql
+[0m15:59:15.792187 [debug] [MainThread]: 1699: static parser successfully parsed gold/gold_pos_terminal.sql
+[0m15:59:15.796738 [debug] [MainThread]: 1699: static parser successfully parsed gold/gold_charging_info.sql
+[0m15:59:15.801777 [debug] [MainThread]: 1699: static parser successfully parsed gold/gold_pos_shop.sql
+[0m15:59:15.806712 [debug] [MainThread]: 1699: static parser successfully parsed gold/gold_local_currency.sql
+[0m15:59:15.812392 [debug] [MainThread]: 1603: static parser failed on silver/tx_type.sql
+[0m15:59:15.823547 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver/tx_type.sql
+[0m15:59:15.826115 [debug] [MainThread]: 1603: static parser failed on silver/pos_shop.sql
+[0m15:59:15.835601 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver/pos_shop.sql
+[0m15:59:15.841189 [debug] [MainThread]: 1603: static parser failed on silver/pos_trmnl.sql
+[0m15:59:15.852052 [debug] [MainThread]: 1602: parser fallback to jinja rendering on silver/pos_trmnl.sql
+[0m15:59:15.859186 [debug] [MainThread]: 1699: static parser successfully parsed silver/dvsn.sql
+[0m15:59:15.867935 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_trmnl.sql
+[0m15:59:15.888229 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_trmnl.sql
+[0m15:59:15.892662 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_rfnd_orgnl_tx_rfrnc.sql
+[0m15:59:15.908570 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_rfnd_orgnl_tx_rfrnc.sql
+[0m15:59:15.914216 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_tx_type.sql
+[0m15:59:15.933825 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_tx_type.sql
+[0m15:59:15.940177 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_tx_line.sql
+[0m15:59:15.959229 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_tx_line.sql
+[0m15:59:15.964065 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_tndr_type.sql
+[0m15:59:15.982893 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_tndr_type.sql
+[0m15:59:15.988425 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_shop.sql
+[0m15:59:16.003203 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_shop.sql
+[0m15:59:16.008134 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_tndr.sql
+[0m15:59:16.020801 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_tndr.sql
+[0m15:59:16.024325 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_dscnt.sql
+[0m15:59:16.040329 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_dscnt.sql
+[0m15:59:16.046351 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_tx_dscnt.sql
+[0m15:59:16.066220 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_tx_dscnt.sql
+[0m15:59:16.073400 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_chrg_infrmtn.sql
+[0m15:59:16.093350 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_chrg_infrmtn.sql
+[0m15:59:16.099994 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_pos_tx.sql
+[0m15:59:16.124082 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_pos_tx.sql
+[0m15:59:16.131346 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_division.sql
+[0m15:59:16.152883 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_division.sql
+[0m15:59:16.157562 [debug] [MainThread]: 1603: static parser failed on bronze/bronze_local_currency.sql
+[0m15:59:16.176227 [debug] [MainThread]: 1602: parser fallback to jinja rendering on bronze/bronze_local_currency.sql
+[0m15:59:16.525713 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.development.older_date' (tests/older_date.sql) depends on a node named 'test_pos_shop' in package '' which was not found
+[0m15:59:16.601620 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.development.staging
+[0m15:59:16.620393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '40b8d9d5-dd91-4858-95ad-ac55084a1722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f365f359460>]}
+[0m15:59:16.656143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '40b8d9d5-dd91-4858-95ad-ac55084a1722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f365f359670>]}
+[0m15:59:16.657590 [info ] [MainThread]: Found 22 models, 0 tests, 0 snapshots, 0 analyses, 324 macros, 0 operations, 0 seed files, 26 sources, 0 exposures, 0 metrics, 0 groups
+[0m15:59:16.658940 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '40b8d9d5-dd91-4858-95ad-ac55084a1722', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f365f3ba550>]}
+[0m15:59:16.662430 [info ] [MainThread]: 
+[0m15:59:16.663141 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m15:59:16.664268 [debug] [MainThread]: Command end result
+[0m15:59:16.680530 [debug] [MainThread]: Command `dbt test` succeeded at 15:59:16.680150 after 3.40 seconds
+[0m15:59:16.681415 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f36664bd3a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f365e242f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f365f3ed6d0>]}
+[0m15:59:16.682422 [debug] [MainThread]: Flushing usage events

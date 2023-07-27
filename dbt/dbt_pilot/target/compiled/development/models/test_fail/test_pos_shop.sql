@@ -1,0 +1,1 @@
+select * from  dfs_poc_db.p_data.ext_pos_shop
