@@ -45,7 +45,8 @@ def basic_cosmos_task_group() -> None:
 
     jaffle_shop = DbtTaskGroup(
         project_config=ProjectConfig(
-            DBT_ROOT_PATH / "jaffle_shop",
+            # DBT_ROOT_PATH / "jaffle_shop",
+            "/opt/airflow/git/cosmos.git/dbt/jaffle_shop"
         ),
         profile_config=profile_config,
     )
