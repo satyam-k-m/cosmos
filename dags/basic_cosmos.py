@@ -19,7 +19,8 @@ DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
 # PROFILES_FILE_PATH = Path(DBT_ROOT_PATH, "jaffle_shop", "profiles.yml")
 # DEFAULT_DBT_ROOT_PATH = Path("/opt/airflow/git/cosmos.git/dbt")
 PROFILES_FILE_PATH = Path(DBT_ROOT_PATH, "test-project", "profiles.yml")
-
+dbt_project_path = Path(DBT_ROOT_PATH, "test_project")
+print(dbt_project_path)
 
 profile_config = ProfileConfig(
     profile_name="default",
@@ -44,7 +45,7 @@ def basic_cosmos_task_group() -> None:
 
     jaffle_shop = DbtTaskGroup(
         project_config=ProjectConfig(
-            DBT_ROOT_PATH / "test_project",
+           dbt_project_path,
         ),
         profile_config=profile_config,
     )
