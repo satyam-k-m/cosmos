@@ -30,7 +30,7 @@ with DAG(dag_id="check_dbt", start_date=pendulum.now()) as dag:
 
       list_dirs = BashOperator(
            task_id = "list_folders",
-           bash_command= f"ls  {DEFAULT_DBT_ROOT_PATH}"
+           bash_command= f"ls -R {DEFAULT_DBT_ROOT_PATH}"
       )
 
 
