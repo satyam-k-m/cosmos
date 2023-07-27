@@ -14,10 +14,12 @@ from cosmos.profiles import SnowflakeUserPasswordProfileMapping
 
 
 # DEFAULT_DBT_ROOT_PATH = Path(__file__).parent / "dbt"
-DEFAULT_DBT_ROOT_PATH = "/opt/airflow/git/cosmos.git/dbt"
+# DEFAULT_DBT_ROOT_PATH = "/opt/airflow/git/cosmos.git/dbt"
+
+DEFAULT_DBT_ROOT_PATH = Path(__file__).parent / "dbt"
 # /opt/airflow/git/DFS.git/dbt_project/a
 DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
-print(DBT_ROOT_PATH)
+
 profile_config = ProfileConfig(
     profile_name="default",
     target_name="dev",
