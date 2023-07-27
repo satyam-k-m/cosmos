@@ -18,7 +18,7 @@ from pendulum import datetime
 
 from airflow import DAG
 from airflow.operators.empty import EmptyOperator
-from cosmos.providers.dbt.task_group import DbtTaskGroup
+from cosmos.airflow.task_group import DbtTaskGroup
 
 
 with DAG(
@@ -29,10 +29,10 @@ with DAG(
     e1 = EmptyOperator(task_id="pre_dbt")
 
     dbt_tg = DbtTaskGroup(
+        group_id = "dbt_project",
         dbt_project_name="development",
         dbt_root_path=DBT_ROOT_PATH,
         dbt_models_dir="models",
-        conn_id="snowflake_default",
         dbt_args={
             "dbt_executable_path": DBT_EXECUTABLE_PATH,
             "schema": "public",

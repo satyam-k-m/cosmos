@@ -1,6 +1,6 @@
 from airflow.decorators import dag
-from cosmos.providers.dbt.task_group import DbtTaskGroup
-from cosmos.providers.dbt.dag import DbtDag
+from cosmos.airflow.task_group import DbtTaskGroup
+from cosmos.airflow.dag import DbtDag
 from pendulum import datetime
 
 CONNECTION_ID = "snowlake_default"
