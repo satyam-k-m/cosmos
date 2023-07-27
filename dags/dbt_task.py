@@ -15,8 +15,7 @@ DBT_ROOT_PATH = "/opt/airflow/git/cosmos.git/dbt"
 
 
 example_local = DbtDag(
-
-    dbt_executable_path=DBT_EXECUTABLE_PATH
+    dbt_executable_path=DBT_EXECUTABLE_PATH,
     dbt_project_name=DBT_PROJECT_NAME,
     conn_id=CONNECTION_ID,
     dbt_args={"schema": "P_DATA"},
