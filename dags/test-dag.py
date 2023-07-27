@@ -28,7 +28,7 @@ with DAG(dag_id="bash_dir", start_date=pendulum.now()) as dag:
 
       list_dirs = BashOperator(
            task_id = "list_folders",
-           bash_command= "ls /opt/airflow/git/cosmos.git/"
+           bash_command= "ls  -R /opt/airflow/git/cosmos.git/dbt"
       )
 
 
