@@ -1,0 +1,15 @@
+version: 2
+  - name: dfs_stage
+    description: staging source in the snowflake schema
+    database: insight_dev
+    schema: ins_bkp
+    tables:
+      - name: ext_dvsn
+        description: Source table for division info
+        columns:
+          - name: run_dt
+            description: run date for the table
+          - name: division
+            description: division
+          - name: value
+            description: contains variant columns capturing all the columns

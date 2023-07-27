@@ -1,18 +1,5 @@
 
-# from airflow.operators.empty import EmptyOperator
-# import os
 
-
-# """
-# ### Run a dbt Core project as a task group with Cosmos
-
-# Simple DAG showing how to run a dbt project as a task group, using
-# an Airflow connection and injecting a variable into the dbt project.
-# """
-
-# from airflow.decorators import dag
-# from cosmos.providers.dbt.task_group import DbtTaskGroup
-# from pendulum import datetime
 
 CONNECTION_ID = "snowlake_default"
 DB_NAME = "DFS_POC_DB"
@@ -24,7 +11,7 @@ DBT_EXECUTABLE_PATH = "/home/airflow/.local/bin/dbt"
 # The path to your dbt root directory
 # HOME = os.environ["HOME"] # retrieve the location of your home folder
 # DBT_ROOT_PATH = os.path.join(HOME,  "DFS/dbt_project/dbt/dbt/") # path to your dbt project
-DBT_ROOT_PATH = "dbt_path = "/opt/airflow/git/cosmos.git/dbt"
+DBT_ROOT_PATH = "/opt/airflow/git/cosmos.git/dbt"
 
 
 from pendulum import datetime
