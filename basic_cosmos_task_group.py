@@ -47,12 +47,12 @@ def basic_cosmos_task_group() -> None:
     jaffle_shop = DbtTaskGroup(
         project_config=ProjectConfig(
             DBT_ROOT_PATH / "dbt_pilot",
-            # manifest_path= DBT_ROOT_PATH / "jaffle_shop/target/manifest.json"
+            manifest_path= DBT_ROOT_PATH / "dbt_pilot/target/manifest.json"
         ),
         profile_config=profile_config,
-        render_config=RenderConfig(
-            load_method=LoadMode.DBT_LS,
-        )
+        # render_config=RenderConfig(
+        #     load_method=LoadMode.DBT_LS,
+        # )
     )
 
     post_dbt = EmptyOperator(task_id="post_dbt")
