@@ -1,46 +1,31 @@
-import os
-import json
-import pendulum
-from airflow import DAG
-from airflow.operators.bash import BashOperator
-from airflow.decorators import dag, task, task_group
-from airflow.utils.task_group import TaskGroup
-from airflow.decorators import dag
 from pendulum import datetime
-from airflow.utils.task_group import TaskGroup
-from airflow.models import Variable
-from airflow.operators.python_operator import PythonOperator
 
+from airflow import DAG
+from airflow.operators.empty import EmptyOperator
+from cosmos import DbtTaskGroup, ProfileConfig, ProjectConfig
+from cosmos.profiles import PostgresUserPasswordProfileMapping
 
-def check_env(ti=None):
-	home_dir = os.environ["HOME"]
-	print("home_dir :", home_dir)
+profile_config = ProfileConfig(
+    profile_name="default",
+    target_name="dev",
+    profile_mapping=PostgresUserPasswordProfileMapping(
+        conn_id="airflow_db",
+        profile_args={"schema": "public"},
+    ),
+)
 
-with DAG(dag_id="bash_dir", start_date=pendulum.now()) as dag:
-      
-        
+with DAG(
+    dag_id="simple_dbt_dag",
+    start_date=datetime(2022, 11, 27),
+    schedule="@daily",
+):
+    e1 = EmptyOperator(task_id="pre_dbt")
 
-      list_libs = BashOperator(
-         task_id = "list_pip",
-         bash_command = "pip list"
+    dbt_tg = DbtTaskGroup(
+        project_config=ProjectConfig("jaffle_shop"),
+        profile_config=profile_config,
+    )
 
-      )
+    e2 = EmptyOperator(task_id="post_dbt")
 
-      list_dirs = BashOperator(
-           task_id = "list_folders",
-           bash_command= "ls  -R /opt/airflow/git/cosmos.git/dbt"
-      )
-
-
-
-   
-
-      list_libs >> list_dirs
-
-    
-     
-      
-
-
-if __name__ == "__main__":
-  dag.cli()
+    e1 >> dbt_tg >> e2
