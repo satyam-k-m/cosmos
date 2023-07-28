@@ -3,8 +3,8 @@ import sys
 from pathlib import Path
 from airflow.models import Variable
 import json
-import dbt_dag as dbt_dag
-import file_validation as file_validation
+import dbt_project.dags.dbt_dag as dbt_dag
+import dbt_project.dags.file_validation as file_validation
 
 
 config_file_path = Path(__file__) / "config.json"
