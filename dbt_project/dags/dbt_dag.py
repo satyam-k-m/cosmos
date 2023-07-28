@@ -6,7 +6,7 @@ from airflow.decorators import dag, task, task_group
 from airflow.utils.task_group import TaskGroup
 from datetime import timedelta
 from airflow.operators.python import PythonOperator
-# from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
+from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 """
 An example DAG that uses Cosmos to render a dbt project as a TaskGroup.
 """
