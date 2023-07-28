@@ -50,6 +50,7 @@ def basic_cosmos_task_group() -> None:
             manifest_path= DBT_ROOT_PATH / "dbt_pilot/target/manifest.json"
         ),
         profile_config=profile_config,
+        operator_args = {"vars": '{"division":"MAC", "run_id":"20230725"}'}
         # render_config=RenderConfig(
         #     load_method=LoadMode.DBT_LS,
         # )
