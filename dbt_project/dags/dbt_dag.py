@@ -90,13 +90,14 @@ def dbt_dag_generator(source, division):
         )
         
         execution_date = "{{task_instance.xcom_pull(key='return_value', task_ids='get_execution_date')}}"
+        dbt_var = {"division":division, "run_id":execution_date}
         dbt_dag = DbtTaskGroup(
             project_config=ProjectConfig(
                 DBT_ROOT_PATH / "dbt_pilot",
                 manifest_path= DBT_ROOT_PATH / "dbt_pilot/target/manifest.json"
             ),
             profile_config=profile_config,
-            operator_args = {"vars": f'{"division":{division}, "run_id":{execution_date}}'}
+            operator_args = {"vars": dbt_var}
         )
 
 
