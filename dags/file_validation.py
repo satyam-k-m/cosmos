@@ -6,7 +6,7 @@ from airflow.decorators import dag
 from airflow.models import Variable
 from airflow.operators.python_operator import PythonOperator
 from airflow.operators.trigger_dagrun  import TriggerDagRunOperator
-import dags.file_processor as file_processor
+import file_processor as file_processor
 # from file_processor import *
 # import file_processor
 
