@@ -1,0 +1,24 @@
+{
+    "dags_mapping":{
+    "POS": {
+        "div": ["SG","CH","MAC"]
+            },
+    "SALES": {
+        "div": ["MAC","Paris","CH"]
+            }
+
+        },
+
+    "model_mapping":{
+
+        "POS":[
+                "tx_type", "pos_trmnl"
+
+            ],
+
+        "SALES":["gold_currency"]
+    }
+
+    
+}
+
