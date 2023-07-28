@@ -7,7 +7,7 @@ import dbt_project.dags.dbt_dag as dbt_dag
 import dbt_project.dags.file_validation as file_validation
 
 
-config_file_path = Path(__file__) / "config.json"
+config_file_path = Path(__file__).parent / "config.json"
 
 
 with open(config_file_path, 'r') as json_file:

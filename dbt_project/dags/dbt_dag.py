@@ -6,7 +6,7 @@ from airflow.decorators import dag, task, task_group
 from airflow.utils.task_group import TaskGroup
 from datetime import timedelta
 from airflow.operators.python import PythonOperator
-from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
+# from airflow.providers.snowflake.operators.snowflake import SnowflakeOperator
 """
 An example DAG that uses Cosmos to render a dbt project as a TaskGroup.
 """
@@ -20,7 +20,7 @@ from cosmos import DbtTaskGroup, ProjectConfig, ProfileConfig, RenderConfig,Load
 from cosmos.profiles import SnowflakeUserPasswordProfileMapping
 
 
-DEFAULT_DBT_ROOT_PATH = Path(__file__).parent / "dbt"
+DEFAULT_DBT_ROOT_PATH = Path(__file__).parent.parent / "dbt"
 DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
 print(DBT_ROOT_PATH)
 
