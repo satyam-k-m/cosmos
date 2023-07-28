@@ -12,7 +12,7 @@ from cosmos import DbtTaskGroup, ProjectConfig, ProfileConfig, RenderConfig,Load
 from cosmos.profiles import SnowflakeUserPasswordProfileMapping
 
 
-DEFAULT_DBT_ROOT_PATH = Path(__file__).parent / "dbt"
+DEFAULT_DBT_ROOT_PATH = Path(__file__).parent.parent / "dbt"
 DBT_ROOT_PATH = Path(os.getenv("DBT_ROOT_PATH", DEFAULT_DBT_ROOT_PATH))
 print(DBT_ROOT_PATH)
 
